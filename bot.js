@@ -97,6 +97,28 @@ if(['sms'].includes(command)) {
         message.delete().catch(O_o=>{});
     }
 
+    if (['clear'].includes(command)) {
+        async function clear() {
+            if (message.member.roles.some(r=> [Охрана, Космонавт, Смотря].includes(r.id))) {
+                if (isNaN(args[0]))
+                    return message.reply('⚠`Ошибка. Причина:` **Аргумент должен являться числом**');
+                else if(args[0] < 2)
+                    return message.reply('⚠`Ошибка. Причина:` **Аргумент не может являться нулем или единицей**');
+                else if (args[0] >= 100) args[0] = 99
+                args[0] = args[0]++   
+                const fetched = await message.channel.fetchMessages({limit: args[0] + 1});
+                message.channel.bulkDelete(fetched);
+                let messagesForm = declOfNum(args[0], ['сообщение', 'сообщения', 'сообщений']);
+                message.channel.send("✅Было успешно удалено **" + args[0] + "**🗑" + messagesForm)
+                message.delete();
+            } else {
+                message.channel.send(message.author + ', ⚠`Ошибка. Причина:` **Вы не можете использовать команду clear**')
+                return;
+            }
+        }
+        clear();
+    }
+
 });
 
 client.on('message', message => {
