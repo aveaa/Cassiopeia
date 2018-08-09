@@ -277,6 +277,23 @@ client.on('message', message => {
         });
     }
 
+    if (message.content.startsWith(p + `nekos`)) {
+        message.delete();
+        message.channel.send('Загрузка...').then(msg => {
+    request('https://nekos.life/api/v2/img/neko', function (error, response, body) {
+                try {
+                    let arr = JSON.parse(body);
+                    let embed = new Discord.RichEmbed()
+                        .setImage(arr['url'])
+                        .setColor('RANDOM')
+                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                    msg.edit({embed});
+                } catch (e) {
+               console.log(e)
+                 }
+            });
+        });
+    }
 
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
