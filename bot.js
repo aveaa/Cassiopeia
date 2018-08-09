@@ -5,6 +5,13 @@ let p = ";"
 
 client.login(process.env.BOT_TOKEN);
 
+//Функции
+function randomInteger(min, max) {
+    max++
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+//Команды
 client.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
