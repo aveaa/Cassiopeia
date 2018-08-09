@@ -7,7 +7,8 @@ let p = ";"
 let Oxpana = '477045054045814793'
 let Kosmo = '477045398263955456'
 let Smotri = '477045398263955456'
-
+let Chmute = '477065648544153600'
+let VoiceMute = '477065632546816000'
 //тут токен
 client.login(process.env.BOT_TOKEN);
 
@@ -16,7 +17,12 @@ function randomInteger(min, max) {
     max++
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+function setBigTimeout(func, timeout) {
+    if (timeout > 0x7FFFFFFF)
+        setTimeout(function() {setBigTimeout(func, timeout-0x7FFFFFFF);}, 0x7FFFFFFF);
+    else
+        setTimeout(func, timeout);
+}
 //Команды
 client.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
@@ -124,6 +130,67 @@ if(['sms'].includes(command)) {
         }
         clear();
     }
+
+    if (['chm'].includes(command) && message.member.roles.some(r=>[Smotri, Oxpana, Kosmo].includes(r.id))) {
+        let user = message.mentions.members.first(); 
+        if (message.member.hasPermission("KICK_MEMBERS")) {
+        if (!user) return message.channel.send(message.author + ', Ошибка. Причина: **Вы забыли упомянуть пользователя или вы хотите замутить того, кто не является пользователем**');
+        if (user.id == message.author.id) return message.channel.send('Зачем ты пытаешься замутить самого себя?');
+        function getSeconds(str) {
+            let seconds = 0;
+            let years = str.match(/(\d+)\s*y/);
+            let months = str.match(/(\d+)\s*M/);
+            let weeks = str.match(/(\d+)\s*w/);
+            let days = str.match(/(\d+)\s*d/);
+            let hours = str.match(/(\d+)\s*h/);
+            let minutes = str.match(/(\d+)\s*m/);
+            let secs = str.match(/(\d+)\s*s/);
+            if (years) { seconds += parseInt(years[1])*31556926; }
+            if (months) { seconds += parseInt(months[1])*2592000; }
+            if (weeks) { seconds += parseInt(weeks[1])*604800; }
+            if (days) { seconds += parseInt(days[1])*86400; }
+            if (hours) { seconds += parseInt(hours[1])*3600; }
+            if (minutes) { seconds += parseInt(minutes[1])*60; }
+            if (secs) { seconds += parseInt(secs[1]); }
+            return seconds;
+        }
+    
+        user.addRole(Chmute);
+        message.channel.send(user + ' был успешно замучен');
+    
+        let reason = args.join(" ").replace(user, '');
+        reason = reason.replace(args[1], '');
+        reason = reason.replace(' ', '');
+    
+        if (!reason) { 
+            reason = ' Не указана'
+        }
+        const embed = new Discord.RichEmbed()
+                    .setTitle("Информация о муте")
+                    .setColor("#000594")
+                    .setDescription('Вы были **замучены** пользователем ' + message.author + '\n\nВремя: **'+ args[1] + '.**\nПричина:**' + reason + '.**')
+                    .setFooter("Mute")
+                    .setTimestamp();
+                    user.send({embed});
+    
+     
+        if (args[1] && getSeconds(args[1]) !== 0 )
+    
+        setBigTimeout(() => {
+            if (message.member.roles.some(r=> [muted].includes(r.id))) {
+            const embedAutoUnmute = new Discord.RichEmbed()
+            .setTitle("Информация о муте")
+            .setColor("af00ff")
+            .setDescription('Вы были автоматически **размучены**.\n\nПричина: **Автоматический размут.**')
+            .setFooter("Unmute")
+            .setTimestamp();
+            user.send({embed: embedAutoUnmute});
+            user.removeRole(muted);
+            message.channel.send(user + ' был размучен');
+            } else return
+            }, getSeconds(args[1])*1000);
+            } else return message.channel.send(message.author + ', Ошибка. Причина: **Вы не можете использовать команду mute.**');
+        }
 
 });
 
