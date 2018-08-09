@@ -19,7 +19,7 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
-        .setDescription(' **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ping** - показать ваш пинг \n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;gasm** - отправить картинку оргазма')
+        .setDescription(' **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ping** - показать ваш пинг \n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** -тыкнуть в кого-то \n **;gasm** - отправить картинку оргазма \n **;ship [user/текст] [user/текст]** - проверить любов в процентах \n **;8ball** `сообщение` -шарик,отвечающий на вопросы')
         .setFooter("Cosmic ⛧ Player's|Cassiopeia")
         .setTimestamp();
     message.channel.send({embed});
