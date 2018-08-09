@@ -31,6 +31,24 @@ if(message.content.startsWith(p + 'say')) {
     message.channel.send({embed});
 }
 
+if (['8ball', 'ball', '8'].includes(command)) {
+    let numOfAnswer = randomInteger(1, 11);
+    if (!args[0]) {
+        message.reply('`Ошибка` **Не указан аргумент** \n\n **Правильное использование:** \n **=8ball** `<вопрос>`'); 
+        return;
+    }
+    if (numOfAnswer === 1) message.reply('Без сомннения!');
+    else if (numOfAnswer === 2) message.reply('Да, конечно');
+    else if (numOfAnswer === 3) message.reply('Да');
+    else if (numOfAnswer === 4) message.reply('В принципе да');
+    else if (numOfAnswer === 5) message.reply('Возможно');
+    else if (numOfAnswer === 6) message.reply('Абсолютно нет!');
+    else if (numOfAnswer === 7) message.reply('Никак нет');
+    else if (numOfAnswer === 8) message.reply('Нет');
+    else if (numOfAnswer === 9) message.reply('Неа');
+    else if (numOfAnswer === 10) message.reply('Cомневаюсь');
+    else message.reply('Спроси позднее, я не знаю');
+}
 
 if(['sms'].includes(command)) {
     let user = message.mentions.members.first(); 
