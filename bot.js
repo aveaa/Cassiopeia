@@ -302,9 +302,10 @@ client.on('message', message => {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
+                        .setTitle(message.author + '**Главное не дрочи...**')
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
