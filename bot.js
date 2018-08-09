@@ -58,11 +58,30 @@ if (['ship'].includes(command)) {
     if (percents >= 100) {loveText = 'ИДЕАЛЬНО!!! :heart_exclamation:'; shkala = '■■■■■■■■■■'; percents = 100;}
     const embed = new Discord.RichEmbed()
         .setTitle(":heart:МАТЧМЕЙКИНГ:heart:")
-        .setColor("ff00b0")
+        .setColor("#000594")
         .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
         .setFooter("Cosmic ⛧ Player's|Cassiopeia")
         .setTimestamp();
     message.channel.send({embed});
+}
+
+if (['8ball'].includes(command)) {
+    let numOfAnswer = randomInteger(1, 11);
+    if (!args[0]) {
+        message.reply('Ошибка. Причина: **Не указан аргумент**\n\nПравильное использование:\n=8ball `<вопрос>`'); 
+        return;
+    }
+    if (numOfAnswer === 1) message.reply('Без сомннения!');
+    else if (numOfAnswer === 2) message.reply('Да, конечно');
+    else if (numOfAnswer === 3) message.reply('Да');
+    else if (numOfAnswer === 4) message.reply('В принципе да');
+    else if (numOfAnswer === 5) message.reply('Возможно');
+    else if (numOfAnswer === 6) message.reply('Абсолютно нет!');
+    else if (numOfAnswer === 7) message.reply('Никак нет');
+    else if (numOfAnswer === 8) message.reply('Нет');
+    else if (numOfAnswer === 9) message.reply('Неа');
+    else if (numOfAnswer === 10) message.reply('Cомневаюсь');
+    else message.reply('Спроси позднее, я не знаю');
 }
 
 if(['sms'].includes(command)) {
