@@ -19,7 +19,7 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
-        .setDescription(' **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ping** - показать ваш пинг \n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** -тыкнуть в кого-то \n **;gasm** - отправить картинку оргазма \n **;ship [user/текст] [user/текст]** - проверить любов в процентах \n **;8ball** `сообщение` -шарик,отвечающий на вопросы')
+        .setDescription(' **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ping** - показать ваш пинг \n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** -тыкнуть в кого-то \n **;cuddle [user]** -прижатся к кому-то  \n **;gasm** - отправить картинку оргазма \n **;ship [user/текст] [user/текст]** - проверить любов в процентах \n **;8ball** `сообщение` -шарик,отвечающий на вопросы')
         .setFooter("Cosmic ⛧ Player's|Cassiopeia")
         .setTimestamp();
     message.channel.send({embed});
@@ -250,6 +250,33 @@ client.on('message', message => {
             });
         });
     }
+
+    if (message.content.startsWith(p + `cuddle`)) {
+        message.delete();
+        let user = message.author;
+        let user1 = message.mentions.users.first();
+        if (!user1 || user1.id === user.id) {
+            user = bot.user;
+            user1 = message.author;
+        }
+        message.channel.send('Загрузка...').then(msg => {
+            request('https://nekos.life/api/v2/img/cuddle', function (error, response, body) {
+                try {
+                    let arr = JSON.parse(body);
+                    let embed = new Discord.RichEmbed()
+                        .setTitle(':3')
+                        .setDescription(`${user} **прижал(а)ся к** ${user1}`)
+                        .setImage(arr['url'])
+                        .setColor('RANDOM')
+                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                    msg.edit({embed});
+                } catch (e) {
+               console.log(e)
+                 }
+            });
+        });
+    }
+
 
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
