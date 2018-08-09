@@ -227,5 +227,5 @@ client.on('message', message => {
     });
 
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `Cosmic ⛧ Player's | ;help`, type: 1 } }).catch();
+        client.user.setPresence({ game: { name: `Cosmic ⛧ Player's | ;help`, type: 2 } }).catch();
     });
