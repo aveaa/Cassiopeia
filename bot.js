@@ -109,89 +109,19 @@ if(['sms'].includes(command)) {
         message.delete().catch(O_o=>{});
     }
 
-    if (['clear'].includes(command)) {
-        async function clear() {
-            if (message.member.roles.some(r=> [Oxpana,Kosmo,Smotri].includes(r.id))) {
-                if (isNaN(args[0]))
-                    return message.reply('⚠`Ошибка. Причина:` **Аргумент должен являться числом**');
-                else if(args[0] < 2)
-                    return message.reply('⚠`Ошибка. Причина:` **Аргумент не может являться нулем или единицей**');
-                else if (args[0] >= 100) args[0] = 99
-                args[0] = args[0]++   
-                const fetched = await message.channel.fetchMessages({limit: args[0] + 1});
-                message.channel.bulkDelete(fetched);
-                let messagesForm = declOfNum(args[0], ['сообщение', 'сообщения', 'сообщений']);
-                message.channel.send("✅Было успешно удалено **" + args[0] + "**🗑" + messagesForm)
-                message.delete();
-            } else {
-                message.channel.send(message.author + ', ⚠`Ошибка. Причина:` **Вы не можете использовать команду clear**')
-                return;
-            }
-        }
-        clear();
-    }
-
-    if (['chm'].includes(command) && message.member.roles.some(r=>[Smotri, Oxpana, Kosmo].includes(r.id))) {
-        let user = message.mentions.members.first(); 
+    if (['kick', 'кик', 'лшсл'].includes(command)) {            
         if (message.member.hasPermission("KICK_MEMBERS")) {
-        if (!user) return message.channel.send(message.author + ', Ошибка. Причина: **Вы забыли упомянуть пользователя или вы хотите замутить того, кто не является пользователем**');
-        if (user.id == message.author.id) return message.channel.send('Зачем ты пытаешься замутить самого себя?');
-        function getSeconds(str) {
-            let seconds = 0;
-            let years = str.match(/(\d+)\s*y/);
-            let months = str.match(/(\d+)\s*M/);
-            let weeks = str.match(/(\d+)\s*w/);
-            let days = str.match(/(\d+)\s*d/);
-            let hours = str.match(/(\d+)\s*h/);
-            let minutes = str.match(/(\d+)\s*m/);
-            let secs = str.match(/(\d+)\s*s/);
-            if (years) { seconds += parseInt(years[1])*31556926; }
-            if (months) { seconds += parseInt(months[1])*2592000; }
-            if (weeks) { seconds += parseInt(weeks[1])*604800; }
-            if (days) { seconds += parseInt(days[1])*86400; }
-            if (hours) { seconds += parseInt(hours[1])*3600; }
-            if (minutes) { seconds += parseInt(minutes[1])*60; }
-            if (secs) { seconds += parseInt(secs[1]); }
-            return seconds;
-        }
-    
-        user.addRole(Chmute);
-        message.channel.send(user + ' был успешно замучен');
-    
+        let user = message.mentions.members.first(); 
+        if (!user) return message.reply('Ошибка. Причина: **Вы забыли упомянуть пользователя или вы хотите кикнуть того, кто не является пользователем**');
         let reason = args.join(" ").replace(user, '');
-        reason = reason.replace(args[1], '');
-        reason = reason.replace(' ', '');
-    
-        if (!reason) { 
-            reason = ' Не указана'
-        }
-        const embed = new Discord.RichEmbed()
-                    .setTitle("Информация о муте")
-                    .setColor("#000594")
-                    .setDescription('Вы были **замучены** пользователем ' + message.author + '\n\nВремя: **'+ args[1] + '.**\nПричина:**' + reason + '.**')
-                    .setFooter("Mute")
-                    .setTimestamp();
-                    user.send({embed});
-    
-     
-        if (args[1] && getSeconds(args[1]) !== 0 )
-    
-        setBigTimeout(() => {
-            if (message.member.roles.some(r=> [muted].includes(r.id))) {
-            const embedAutoUnmute = new Discord.RichEmbed()
-            .setTitle("Информация о муте")
-            .setColor("af00ff")
-            .setDescription('Вы были автоматически **размучены**.\n\nПричина: **Автоматический размут.**')
-            .setFooter("Unmute")
-            .setTimestamp();
-            user.send({embed: embedAutoUnmute});
-            user.removeRole(muted);
-            message.channel.send(user + ' был размучен');
-            } else return
-            }, getSeconds(args[1])*1000);
-            } else return message.channel.send(message.author + ', Ошибка. Причина: **Вы не можете использовать команду mute.**');
-        }
-
+        if (user === message.author) return message.reply('Ошибка. Причина: **КИКАТЬ САМОГО СЕБЯ ЭТО ТУПО!**');
+        if(user.hasPermission("KICK_MEMBERS")) return message.reply('Ошибка. Причина: **Вы не можете кикнуть этого пользователя, т. к. у него есть право `Администратор`**');
+        if (!reason || reason === ' ') return message.reply('Ошибка. Причина: **Кикать без причины нельзя**')
+    } else {
+        message.reply('Ошибка. Причина: **Вы не можете использовать команду kick, вы должны иметь роль**');
+        return
+    }
+}       
 });
 
 client.on('message', message => {
