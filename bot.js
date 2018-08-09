@@ -108,20 +108,6 @@ if(['sms'].includes(command)) {
         })
         message.delete().catch(O_o=>{});
     }
-
-    if (['kick', 'кик', 'лшсл'].includes(command)) {            
-        if (message.member.hasPermission("KICK_MEMBERS")) {
-        let user = message.mentions.members.first(); 
-        if (!user) return message.reply('Ошибка. Причина: **Вы забыли упомянуть пользователя или вы хотите кикнуть того, кто не является пользователем**');
-        let reason = args.join(" ").replace(user, '');
-        if (user === message.author) return message.reply('Ошибка. Причина: **КИКАТЬ САМОГО СЕБЯ ЭТО ТУПО!**');
-        if(user.hasPermission("KICK_MEMBERS")) return message.reply('Ошибка. Причина: **Вы не можете кикнуть этого пользователя, т. к. у него есть право `Администратор`**');
-        if (!reason || reason === ' ') return message.reply('Ошибка. Причина: **Кикать без причины нельзя**')
-    } else {
-        message.reply('Ошибка. Причина: **Вы не можете использовать команду kick, вы должны иметь роль**');
-        return
-    }
-}       
 });
 
 client.on('message', message => {
