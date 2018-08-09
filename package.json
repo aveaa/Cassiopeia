@@ -1,0 +1,17 @@
+{
+  "name": "cassiopeia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.3.2",
+    "express": "^4.16.3",
+    "get-image-colors": "1.8.1",
+    "ip": "^1.1.5",
+    "request": "^2.87.0",
+    "rgbcolor": "1.0.1"
+  }
+}
