@@ -30,24 +30,32 @@ if(message.content.startsWith(p + 'say')) {
     .setFooter("Cosmic ⛧ Player's|Cassiopeia")
     message.channel.send({embed});
 }
-
-if (['8ball', 'ball', '8'].includes(command)) {
-    let numOfAnswer = randomInteger(1, 11);
-    if (!args[0]) {
-        message.reply('`Ошибка` **Не указан аргумент** \n\n **Правильное использование:** \n **=8ball** `<вопрос>`'); 
-        return;
-    }
-    if (numOfAnswer === 1) message.reply('Без сомннения!');
-    else if (numOfAnswer === 2) message.reply('Да, конечно');
-    else if (numOfAnswer === 3) message.reply('Да');
-    else if (numOfAnswer === 4) message.reply('В принципе да');
-    else if (numOfAnswer === 5) message.reply('Возможно');
-    else if (numOfAnswer === 6) message.reply('Абсолютно нет!');
-    else if (numOfAnswer === 7) message.reply('Никак нет');
-    else if (numOfAnswer === 8) message.reply('Нет');
-    else if (numOfAnswer === 9) message.reply('Неа');
-    else if (numOfAnswer === 10) message.reply('Cомневаюсь');
-    else message.reply('Спроси позднее, я не знаю');
+    
+if (['ship'].includes(command)) {
+    if (!args[0]) args[0] = message.guild.members.random();
+    if (!args[1]) args[1] = message.author
+    if (args[0].length > 30 || args[1].length > 30) return message.reply('✖ `Ошибка. Причина:` **Аргумент не может быть длиннее 30 символов**');
+    let loveText
+    let shkala
+    let percents = randomInteger(0, 100)
+    if (percents <= 99) {loveText = 'Невероятно!!! :heart_eyes:'; shkala = '■■■■■■■■■□'; }
+    if (percents <= 89) {loveText = 'Превосходно! :heartpulse:'; shkala = '■■■■■■■■□□';}
+    if (percents <= 79) {loveText = 'Ууу ( ͡° ͜ʖ ͡°)'; shkala = '■■■■■■■□□□';}
+    if (percents <= 69) {loveText = 'Дружески :+1:'; shkala = '■■■■■■□□□□';}
+    if (percents <= 59) {loveText = 'Неплохо :confused:'; shkala = '■■■■■□□□□□';}
+    if (percents <= 49) {loveText = 'Средне :thinking:'; shkala = '■■■■□□□□□□';}
+    if (percents <= 49) {loveText = 'Плохо :frowning2:'; shkala = '■■■□□□□□□□';}
+    if (percents <= 29) {loveText = 'Очень плохо :disappointed_relieved:'; shkala = '■■□□□□□□□□';}
+    if (percents <= 19) {loveText = 'Ужасно :sob:'; shkala = '■□□□□□□□□□';}
+    if (percents <= 9) {loveText = 'Хуже некуда :poop:'; shkala = '□□□□□□□□□□';}
+    if (percents >= 100) {loveText = 'ИДЕАЛЬНО!!! :heart_exclamation:'; shkala = '■■■■■■■■■■'; percents = 100;}
+    const embed = new Discord.RichEmbed()
+        .setTitle(":heart:МАТЧМЕЙКИНГ:heart:")
+        .setColor("ff00b0")
+        .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
+        .setFooter("Cosmic ⛧ Player's|Cassiopeia")
+        .setTimestamp();
+    message.channel.send({embed});
 }
 
 if(['sms'].includes(command)) {
@@ -245,5 +253,5 @@ client.on('message', message => {
     });
 
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `Cosmic ⛧ Player's | ;help`, type: 0 } }).catch();
+        client.user.setPresence({ game: { name: `Cosmic ⛧ Player's | ;help`, type: 3 } }).catch();
     });
