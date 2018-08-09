@@ -4,9 +4,9 @@ const client = new Discord.Client();
 let p = ";"
 
 //ID ролей
-let Охрана = '477045054045814793'
-let Космонавт = '477045398263955456'
-let Смотря = '477045398263955456'
+let Oxpana = '477045054045814793'
+let Kosmo = '477045398263955456'
+let Smotri = '477045398263955456'
 
 //тут токен
 client.login(process.env.BOT_TOKEN);
@@ -105,7 +105,7 @@ if(['sms'].includes(command)) {
 
     if (['clear'].includes(command)) {
         async function clear() {
-            if (message.member.roles.some(r=> [Охрана, Космонавт, Смотря].includes(r.id))) {
+            if (message.member.roles.some(r=> [Oxpana,Kosmo,Smotri].includes(r.id))) {
                 if (isNaN(args[0]))
                     return message.reply('⚠`Ошибка. Причина:` **Аргумент должен являться числом**');
                 else if(args[0] < 2)
