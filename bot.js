@@ -96,6 +96,12 @@ if (['8ball'].includes(command)) {
     else message.reply('Спроси позднее, я не знаю');
 }
 
+if (message.author.bot) return;
+let arr = [];
+message.guild.fetchInvites().then(invites => {
+invites.forEach(invite => {
+    arr.push(invite.code); 
+})})
 let matches = message.content.match(/https:\/\/discord(app\.com|\.gg|\.me|\.io)\/?(invite\/)?([_a-zA-Z0-9]{5,32})/gi);
 if (matches)
 matches.forEach((match) => {
