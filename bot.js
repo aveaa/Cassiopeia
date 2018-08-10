@@ -96,6 +96,21 @@ if (['8ball'].includes(command)) {
     else message.reply('Спроси позднее, я не знаю');
 }
 
+let matches = message.content.match(/https:\/\/discord(app\.com|\.gg|\.me|\.io)\/?(invite\/)?([_a-zA-Z0-9]{5,32})/gi);
+if (matches)
+matches.forEach((match) => {
+if (!arr.includes(match.match(/https:\/\/discord(app\.com|\.gg|\.me|\.io)\/?(invite\/)?([_a-zA-Z0-9]{5,32})/i)[3])) {
+    const embed = new Discord.RichEmbed()
+        .setTitle("Пяр,Пяр,Пяр!")
+        .setColor("#000594")
+        .setFooter("")
+        .setTimestamp();
+    message.author.send({embed});
+    message.channel.send(message.author + '**Ты что ебобо?Харе пярится!**');
+    message.delete();
+}
+})
+
 if(['sms'].includes(command)) {
     let user = message.mentions.members.first(); 
         if (!user) {
