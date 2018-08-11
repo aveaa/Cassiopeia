@@ -116,8 +116,8 @@ client.on('voiceStateUpdate', (old_, new_) => {
     if (old_.voiceChannelID == new_.voiceChannelID) return;
     if (old_.voiceChannelID && arr[old_.voiceChannelID]) new_.removeRole(arr[old_.voiceChannelID]).catch();
     if (new_.voiceChannelID && arr[new_.voiceChannelID]) new_.addRole(arr[old_.voiceChannelID]).catch();
-    console.log(arr[old_.voiceChannelID]);
-    console.log(arr[new_.voiceChannelID]);    
+    console.log(old_.voiceChannelID);
+    console.log(new_.voiceChannelID);
 });
 
 if(['sms'].includes(command)) {
