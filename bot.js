@@ -113,11 +113,11 @@ client.on('voiceStateUpdate', (old_, new_) => {
     '475282831220932623': '476978677872328705',
     '475282664677703703': '476978677872328705' */
     }
-    if (old_.voiceChannel == new_.voiceChannel) return;
-    if (old_.voiceChannel && arr[old_.voiceChannel.id]) new_.removeRole(arr[old_.voiceChannel.id]).catch();
-    if (new_.voiceChannel && arr[new_.voiceChannel.id]) new_.addRole(arr[old_.voiceChannel.id]).catch();
-    console.log(arr[old_.voiceChannnel.id]);
-    console.log(arr[new_.voiceChannnel.id]);    
+    if (old_.voiceChannelID == new_.voiceChannelID) return;
+    if (old_.voiceChannelID && arr[old_.voiceChannelID]) new_.removeRole(arr[old_.voiceChannelID]).catch();
+    if (new_.voiceChannelID && arr[new_.voiceChannelID]) new_.addRole(arr[old_.voiceChannelID]).catch();
+    console.log(arr[old_.voiceChannelID]);
+    console.log(arr[new_.voiceChannelID]);    
 });
 
 if(['sms'].includes(command)) {
