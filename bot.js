@@ -117,8 +117,8 @@ client.on('voiceStateUpdate', (old_, new_) => {
     console.log(arr[old_.voiceChannnel.id]);
     console.log(arr[new_.voiceChannnel.id]);
     if (old_.voiceChannel && arr[old_.voiceChannel.id]) new_.removeRole(arr[old_.voiceChannel.id]).catch();
-    if (new_.voiceChannel && arr[new_.voiceChannel.id]) new_.addRole(arr[old_.voiceChannel.id]).catch();
-    })
+    if (new_.voiceChannel && arr[new_.voiceChannel.id]) new_.addRole(arr[old_.voiceChannel.id]).catch();    
+});
 
 if(['sms'].includes(command)) {
     let user = message.mentions.members.first(); 
