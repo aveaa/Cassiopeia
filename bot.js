@@ -96,26 +96,15 @@ if (['8ball'].includes(command)) {
     else message.reply('Спроси позднее, я не знаю');
 }
 
-if (message.author.bot) return;
-let arr = [];
-message.guild.fetchInvites().then(invites => {
-invites.forEach(invite => {
-    arr.push(invite.code); 
-})})
-let matches = message.content.match(/https:\/\/discord(app\.com|\.gg|\.me|\.io)\/?(invite\/)?([_a-zA-Z0-9]{5,32})/gi);
-if (matches)
-matches.forEach((match) => {
-if (!arr.includes(match.match(/https:\/\/discord(app\.com|\.gg|\.me|\.io)\/?(invite\/)?([_a-zA-Z0-9]{5,32})/i)[3])) {
-    const embed = new Discord.RichEmbed()
-        .setTitle("Пяр,Пяр,Пяр!")
-        .setColor("#000594")
-        .setFooter("")
-        .setTimestamp();
-    message.author.send({embed});
-    message.channel.send(message.author + '**Ты что ебобо?Харе пярится!**');
-    message.delete();
-}
-})
+client.on('voiceStateUpdate', (old_, new_) => {
+    let arr = {
+    '475282831220932623': '477739050413981707',
+    '475282664677703703': '477739050413981707'
+    }
+    if (old_.voiceChannel == new_.voiceChannel) return;
+    if (old_.voiceChannel && arr[old_.voiceChannel.id]) new_.removeRole(arr[old_.voiceChannel.id]).catch();
+    if (new_.voiceChannel && arr[new_.voiceChannel.id]) new_.addRole(arr[old_.voiceChannel.id]).catch();
+    })
 
 if(['sms'].includes(command)) {
     let user = message.mentions.members.first(); 
