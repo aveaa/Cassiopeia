@@ -99,7 +99,7 @@ if (['8ball'].includes(command)) {
 client.on('voiceStateUpdate', (old_, new_) => {
     let arr = {
     '475282831220932623': '477743174815711232',
-    '475282664677703703': '477743174815711232'
+    '475282664677703703': '476978677872328705'
     }
     if (old_.voiceChannel == new_.voiceChannel) return;
     if (old_.voiceChannel && arr[old_.voiceChannel.id]) new_.removeRole(arr[old_.voiceChannel.id]).catch();
