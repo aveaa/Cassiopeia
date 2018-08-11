@@ -97,8 +97,6 @@ if (['8ball'].includes(command)) {
 }
 
 client.on('voiceStateUpdate', (old_, new_) => {
-    console.log(arr[old_.voiceChannnel.id]);
-console.log(arr[new_.voiceChannnel.id]);
     let arr = {
     '"475282831220932623"': '"476978677872328705"',
     '"475282664677703703"': '"476978677872328705"',
