@@ -120,15 +120,17 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **обнял(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;hug @User") 
+                       .setFooter("Cosmic ⛧ Player's| ;hug @User") 
                        .setTimestamp();
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                       msg.edit({embed
+                       }).then(function(message) {
+                           message.react("🤝")
+                       }).catch(function() {});
+                       } catch (e) {
+                      console.log(e)
                  }
             });
         });
@@ -146,11 +148,10 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **погладил(а) по голове** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;pat @User") 
+                        .setFooter("Cosmic ⛧ Player's| ;pat @User") 
                         .setTimestamp();
                         msg.edit({embed
                     }).then(function(message) {
@@ -175,15 +176,17 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **поцеловал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;kiss @User") 
+                        .setFooter("Cosmic ⛧ Player's| ;kiss @User") 
                         .setTimestamp(); 
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                        msg.edit({embed
+                        }).then(function(message) {
+                            message.react("♥")
+                        }).catch(function() {});
+                        } catch (e) {
+                       console.log(e)
                  }
             });
         });
@@ -201,15 +204,17 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle('>:(')
                         .setDescription(`${user} **ударил(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;slap @User") 
+                        .setFooter("Cosmic ⛧ Player's| ;slap @User") 
                         .setTimestamp();
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                        msg.edit({embed
+                        }).then(function(message) {
+                            message.react("👊")
+                        }).catch(function() {});
+                        } catch (e) {
+                       console.log(e)
                  }
             });
         });
@@ -231,11 +236,14 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **тыкнул(а) в** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;poke @User") 
+                        .setFooter("Cosmic ⛧ Player's | ;poke @User") 
                         .setTimestamp();
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                        msg.edit({embed
+                        }).then(function(message) {
+                            message.react("👉")
+                        }).catch(function() {});
+                        } catch (e) {
+                       console.log(e)
                  }
             });
         });
@@ -275,11 +283,14 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **прижал(а)ся к** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;cuddle @User") 
+                        .setFooter("Cosmic ⛧ Player's | ;cuddle @User") 
                         .setTimestamp();
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                        msg.edit({embed
+                        }).then(function(message) {
+                            message.react("👐")
+                        }).catch(function() {});
+                        } catch (e) {
+                       console.log(e)
                  }
             });
         });
@@ -320,11 +331,14 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **пощекотал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;tickle @User") 
+                        .setFooter("Cosmic ⛧ Player's | ;tickle @User") 
                         .setTimestamp(); 
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
+                        msg.edit({embed
+                        }).then(function(message) {
+                            message.react("😘")
+                        }).catch(function() {});
+                        } catch (e) {
+                       console.log(e)
                  }
             });
         });
