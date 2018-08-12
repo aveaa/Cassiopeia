@@ -3,6 +3,8 @@ const request = require("request");
 const client = new Discord.Client();
 //подклюение commands.js
 require('./commands.js')
+//exports
+exports.client=client;
 //ID ролей
 let Oxpana = '477045054045814793'
 let Kosmo = '477045398263955456'
