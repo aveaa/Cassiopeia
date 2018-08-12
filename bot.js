@@ -1,7 +1,6 @@
 const Discord = require(`discord.js`);
 const request = require("request");
 const client = new Discord.Client();
-let p = ";"
 //подклюение commands.js
 require('./commands.js')
 //ID ролей

@@ -1,3 +1,4 @@
+let p = ";"
 //Функции
 function randomInteger(min, max) {
     max++
