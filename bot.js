@@ -343,6 +343,24 @@ if(['sms'].includes(command)) {
             });
         });
     }
+    if (message.content.startsWith(p + `smoke`)) {
+        message.delete();
+        message.channel.send('Загрузка...').then(msg => {
+    request('https://imgur.com/CqtXR7t?r', function (error, response, body) {
+                try {
+                    let arr = JSON.parse(body);
+                    let embed = new Discord.RichEmbed()
+                        .setImage(arr['url'])
+                        .setColor('RANDOM')
+                        .setFooter("Cosmic ⛧ Player's | ;smoke") 
+                        .setTimestamp();
+                    msg.edit({embed});
+                } catch (e) {
+               console.log(e)
+                 }
+            });
+        });
+    }
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
