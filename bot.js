@@ -335,7 +335,7 @@ if(['sms'].includes(command)) {
                         .setTimestamp(); 
                         msg.edit({embed
                         }).then(function(message) {
-                            message.react("😘")
+                            message.react("🤣")
                         }).catch(function() {});
                         } catch (e) {
                        console.log(e)
