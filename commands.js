@@ -1,3 +1,4 @@
+const client = new Discord.Client();
 let p = ";"
 //Функции
 function randomInteger(min, max) {

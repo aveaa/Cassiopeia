@@ -1,6 +1,5 @@
 const Discord = require(`discord.js`);
 const request = require("request");
-const client = new Discord.Client();
 //подклюение commands.js
 require('./commands.js')
 //exports
