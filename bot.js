@@ -124,7 +124,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **обнял(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia|;hug @User") 
+                       .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;hug @User") 
                        .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
@@ -150,14 +150,18 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **погладил(а) по голове** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
-                    msg.edit({embed});
-                } catch (e) {
-               console.log(e)
-                 }
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;pat @User") 
+                        .setTimestamp();
+                        msg.edit({embed
+                    }).then(function(message) {
+                        message.react("✋")
+                    }).catch(function() {});
+                    } catch (e) {
+                   console.log(e)
+                     }
+                });
             });
-        });
-    }
+        }
     if (message.content.startsWith(p + `kiss`)) {
         message.delete();
         let user = message.author;
@@ -175,7 +179,8 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **поцеловал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;kiss @User") 
+                        .setTimestamp(); 
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -200,7 +205,8 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **ударил(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;slap @User") 
+                        .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -225,7 +231,8 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **тыкнул(а) в** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;poke @User") 
+                        .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -242,7 +249,8 @@ if(['sms'].includes(command)) {
                     let embed = new Discord.RichEmbed()
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;gasm") 
+                        .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -267,7 +275,8 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **прижал(а)ся к** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;cuddle @User") 
+                        .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -285,7 +294,8 @@ if(['sms'].includes(command)) {
                         .setTitle(message.author.username + ' Главное не дрочи...')
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;hentai ") 
+                        .setTimestamp(); 
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -310,7 +320,8 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **пощекотал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's|Cassiopeia"); 
+                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;tickle @User") 
+                        .setTimestamp(); 
                     msg.edit({embed});
                 } catch (e) {
                console.log(e)
@@ -352,7 +363,7 @@ if(message.content.startsWith(p + `help`)) {
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
         .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку')
-        .setFooter("Cosmic ⛧ Player's|Cassiopeia")
+        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;help") 
         .setTimestamp();
     message.channel.send({embed});
 }});
