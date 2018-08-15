@@ -31,7 +31,8 @@ if(message.content.startsWith(p + 'say')) {
     const embed = new Discord.RichEmbed()
     .setColor("#000594")
     .setDescription(say)
-    .setFooter(server_name+"|Cassiopeia")
+    .setFooter(server_name+"| ;say [text]")
+    .setTimestamp();
     message.channel.send({embed});
 }
 if (['ship'].includes(command)) {
@@ -53,10 +54,10 @@ if (['ship'].includes(command)) {
     if (percents <= 9) {loveText = 'Хуже некуда :poop:'; shkala = '□□□□□□□□□□';}
     if (percents >= 100) {loveText = 'ИДЕАЛЬНО!!! :heart_exclamation:'; shkala = '■■■■■■■■■■'; percents = 100;}
     const embed = new Discord.RichEmbed()
-        .setTitle(":heart:МАТЧМЕЙКИНГ:heart:")
+        .setTitle(":heart: МАТЧМЕЙКИНГ :heart:")
         .setColor("#000594")
         .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
-        .setFooter(server_name+"|;ship")
+        .setFooter(server_name+"| ;ship")
         .setTimestamp();
     message.channel.send({embed});
 }
@@ -364,7 +365,8 @@ if(['sms'].includes(command)) {
         const embed = new Discord.RichEmbed()
     .setColor("#000594")
     .setDescription('\n **Pong!** `' + `${Date.now() - message.createdTimestamp}` + ' ms` \n')
-    .setFooter(server_name+"| ;ping")  
+    .setFooter(server_name+"| ;ping")
+    .setTimestamp();  
     message.channel.send({embed});
     }
     });
