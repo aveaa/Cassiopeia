@@ -383,5 +383,5 @@ if(message.content.startsWith(p + `help`)) {
 }});
 //статус
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `Star ⛦ System | ;help`, type: 3 } }).catch();
+        client.user.setPresence({ game: { name: `Star  System | ;help`, type: 3 } }).catch();
     });
