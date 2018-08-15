@@ -164,34 +164,34 @@ if(['sms'].includes(command)) {
                 });
             });
         }
-    if (message.content.startsWith(p + `kiss`)) {
-        message.delete();
-        let user = message.author;
-        let user1 = message.mentions.users.first();
-        if (!user1 || user1.id === user.id) {
-            user = bot.user;
-            user1 = message.author;
-        }
-        message.channel.send('Загрузка...').then(msg => {
-            request('https://nekos.life/api/v2/img/kiss', function (error, response, body) {
-                try {
-                    let arr = JSON.parse(body);
-                    let embed = new Discord.RichEmbed()
-                        .setDescription(`${user} **поцеловал(а)** ${user1}`)
-                        .setImage(arr['url'])
-                        .setColor('RANDOM')
-                        .setFooter(server_name+"| ;kiss @User") 
-                        .setTimestamp(); 
-                        msg.edit({embed
-                        }).then(function(message) {
-                            message.react("♥")
-                        }).catch(function() {});
-                        } catch (e) {
-                       console.log(e)
-                 }
+        if (message.content.startsWith(p + `slap`)) {
+            message.delete();
+            let user = message.author;
+            let user1 = message.mentions.users.first();
+            if (!user1 || user1.id === user.id) {
+                user = bot.user;
+                user1 = message.author;
+            }
+            message.channel.send('Загрузка...').then(msg => {
+                request('https://nekos.life/api/v2/img/kiss', function (error, response, body) {
+                    try {
+                        let arr = JSON.parse(body);
+                        let embed = new Discord.RichEmbed()
+                            .setDescription(`${user} **поцеловал(а)** ${user1}`)
+                            .setImage(arr['url'])
+                            .setColor('RANDOM')
+                            .setFooter(server_name+"| ;kiss @User") 
+                            .setTimestamp();
+                            msg.edit({embed
+                            }).then(function(message) {
+                                message.react("💗")
+                            }).catch(function() {});
+                            } catch (e) {
+                           console.log(e)
+                     }
+                });
             });
-        });
-    }
+        }
     if (message.content.startsWith(p + `slap`)) {
         message.delete();
         let user = message.author;
