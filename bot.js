@@ -257,7 +257,7 @@ if(['sms'].includes(command)) {
                     let embed = new Discord.RichEmbed()
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter(server_name+";gasm") 
+                        .setFooter(server_name+"| ;gasm") 
                         .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
