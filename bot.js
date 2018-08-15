@@ -105,7 +105,7 @@ if(['sms'].includes(command)) {
             return
         }
         const sendMessage = args.join(" ");
-        let msg = user.send('**Вам пришло смс от**'+ message.author + '. \n**Он сказал(а):** ' + sendMessage.replace(user, '')).catch(()=>{message.reply('***Ошибка. Причина: не указано сообщение***');
+        let msg = user.send('**Вам пришло смс от** '+message.author.username + '. \n**Он сказал(а):** '+ sendMessage.replace(user, '')).catch(()=>{message.reply('***Ошибка. Причина: не указано сообщение***');
         })
         message.delete().catch(O_o=>{});
     }
