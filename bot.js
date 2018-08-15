@@ -3,11 +3,12 @@ const request = require("request");
 const client = new Discord.Client();
 let p = ";"
 //ID ролей
-let Oxpana = '477045054045814793'
-let Kosmo = '477045398263955456'
-let Smotri = '477045398263955456'
-let Chmute = '477065648544153600'
-let VoiceMute = '477065632546816000'
+let Oxpana = '477045054045814793';
+let Kosmo = '477045398263955456';
+let Smotri = '477045398263955456';
+let Chmute = '477065648544153600';
+let VoiceMute = '477065632546816000';
+const server_name = 'Star ⛦ System'
 //Функции
 function randomInteger(min, max) {
     max++
@@ -30,7 +31,7 @@ if(message.content.startsWith(p + 'say')) {
     const embed = new Discord.RichEmbed()
     .setColor("#000594")
     .setDescription(say)
-    .setFooter("Cosmic ⛧ Player's|Cassiopeia")
+    .setFooter(server_name+"|Cassiopeia")
     message.channel.send({embed});
 }
 if (['ship'].includes(command)) {
@@ -55,7 +56,7 @@ if (['ship'].includes(command)) {
         .setTitle(":heart:МАТЧМЕЙКИНГ:heart:")
         .setColor("#000594")
         .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
-        .setFooter("Cosmic ⛧ Player's|Cassiopeia")
+        .setFooter(server_name+"|Cassiopeia")
         .setTimestamp();
     message.channel.send({embed});
 }
@@ -123,7 +124,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **обнял(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                       .setFooter("Cosmic ⛧ Player's| ;hug @User") 
+                       .setFooter(server_name+"| ;hug @User") 
                        .setTimestamp();
                        msg.edit({embed
                        }).then(function(message) {
@@ -151,7 +152,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **погладил(а) по голове** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's| ;pat @User") 
+                        .setFooter(server_name+"| ;pat @User") 
                         .setTimestamp();
                         msg.edit({embed
                     }).then(function(message) {
@@ -179,7 +180,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **поцеловал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's| ;kiss @User") 
+                        .setFooter(server_name+"| ;kiss @User") 
                         .setTimestamp(); 
                         msg.edit({embed
                         }).then(function(message) {
@@ -207,7 +208,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **ударил(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's| ;slap @User") 
+                        .setFooter(server_name+"| ;slap @User") 
                         .setTimestamp();
                         msg.edit({embed
                         }).then(function(message) {
@@ -236,7 +237,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **тыкнул(а) в** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's | ;poke @User") 
+                        .setFooter(server_name+"| ;poke @User") 
                         .setTimestamp();
                         msg.edit({embed
                         }).then(function(message) {
@@ -257,7 +258,7 @@ if(['sms'].includes(command)) {
                     let embed = new Discord.RichEmbed()
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;gasm") 
+                        .setFooter(server_name+"|Cassiopeia| ;gasm") 
                         .setTimestamp();
                     msg.edit({embed});
                 } catch (e) {
@@ -283,7 +284,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **прижал(а)ся к** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's | ;cuddle @User") 
+                        .setFooter(server_name+"| ;cuddle @User") 
                         .setTimestamp();
                         msg.edit({embed
                         }).then(function(message) {
@@ -305,7 +306,7 @@ if(['sms'].includes(command)) {
                         .setTitle(message.author.username + ' Главное не дрочи...')
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;hentai ") 
+                        .setFooter(server_name+"|Cassiopeia| ;hentai ") 
                         .setTimestamp(); 
                     msg.edit({embed});
                 } catch (e) {
@@ -331,7 +332,7 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **пощекотал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
-                        .setFooter("Cosmic ⛧ Player's | ;tickle @User") 
+                        .setFooter(server_name+" | ;tickle @User") 
                         .setTimestamp(); 
                         msg.edit({embed
                         }).then(function(message) {
@@ -364,7 +365,7 @@ if(['sms'].includes(command)) {
         const embed = new Discord.RichEmbed()
     .setColor("#000594")
     .setDescription('\n **Pong!** `' + `${Date.now() - message.createdTimestamp}` + ' ms` \n')
-    .setFooter("Cosmic ⛧ Player's|Cassiopeia")  
+    .setFooter(server_name+"|Cassiopeia")  
     message.channel.send({embed});
     }
     });
@@ -377,11 +378,11 @@ if(message.content.startsWith(p + `help`)) {
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
         .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку')
-        .setFooter("Cosmic ⛧ Player's|Cassiopeia| ;help") 
+        .setFooter(server_name+"|Cassiopeia| ;help") 
         .setTimestamp();
     message.channel.send({embed});
 }});
 //статус
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `Cosmic ⛧ Player's | ;help`, type: 3 } }).catch();
+        client.user.setPresence({ game: { name: `Star ⛦ System | ;help`, type: 3 } }).catch();
     });
