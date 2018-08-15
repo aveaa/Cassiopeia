@@ -164,7 +164,7 @@ if(['sms'].includes(command)) {
                 });
             });
         }
-        if (message.content.startsWith(p + `slap`)) {
+        if (message.content.startsWith(p + `kiss`)) {
             message.delete();
             let user = message.author;
             let user1 = message.mentions.users.first();
