@@ -345,14 +345,6 @@ if(['sms'].includes(command)) {
         });
     }
 if(message.content.startsWith(p+"cry")){
-    name: __filename.slice(__dirname.length + 1).split(".")[0],
-    description: "Плакать",
-    aliases: ["suffer"],
-    usage: "[@]",
-    guildOnly: true,
-	hide: true,
-	group: __dirname.split(/[\\/]/)[__dirname.split(/[\\/]/).length-1],
-    execute(message, args) {
         var victim = message.mentions.users.first()
 
         var { img, msg } = tools.getGif(this.name);
