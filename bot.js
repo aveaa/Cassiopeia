@@ -344,25 +344,6 @@ if(['sms'].includes(command)) {
             });
         });
     }
-if(message.content.startsWith(p+"cry")){
-        var victim = message.mentions.users.first()
-
-        var { img, msg } = tools.getGif(this.name);
-
-        var embed = new Discord.RichEmbed()
-            if (!!victim) {
-				embed.setDescription(msg.replace(/\$1/g, message.author).replace(/\$2/g, victim))
-			};
-            
-            embed.setImage(img);
-
-            embed.setColor(`RANDOM`);
-
-            var memberRequest = message.guild.members.get(message.author.id);
-            embed.setFooter(`Запрос от ${(!memberRequest || !memberRequest.nickname) ? message.author.username : memberRequest.nickname} | ${prefix}${this.name}`, message.author.displayAvatarURL);           
-
-        message.channel.send({embed});
-    }
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
