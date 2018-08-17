@@ -1,1 +1,397 @@
-
+{
+	"afraid" : {
+		"text" : [
+			"$1 *боится* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/hhX3ARsqy9bYQ/giphy.gif",
+			"https://media.giphy.com/media/1ZXfnXk2F7Zio/giphy.gif",
+			"https://i.pinimg.com/originals/90/6d/61/906d61263992beb3000e6beab2d860aa.gif",
+			"https://78.media.tumblr.com/a1ec7a76d2c55d0e9ba5bcf14004bab0/tumblr_n4gagcXigK1tyunbro1_500.gif",
+			"https://i.giphy.com/media/UCdYMxha6iemA/giphy.gif",
+			"https://pa1.narvii.com/6329/21cf4fb4b212bfbe3ebe8fbebc59f49eabdd09f6_hq.gif",
+			"https://media.giphy.com/media/OGC76skhmPixi/giphy.gif"
+		]
+	},
+	"attack" : {
+		"text" : [
+			"$1 *атакует* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/5BdyWDMwIMJ2g/giphy.gif",
+			"http://4.bp.blogspot.com/-xnOt9JSf4RY/UKutyvUFmwI/AAAAAAAABpM/9_uRT94yWSA/s1600/tumblr_m8rb8pPLtr1qkudkfo1_500.gif",
+			"https://i.giphy.com/media/DOzu25DT0vlpS/giphy.gif",
+			"https://media3.giphy.com/media/1mpAmSVQNOzxS/giphy.gif",
+			"https://media.giphy.com/media/GlGlNjjhlU9lm/giphy.gif",
+			"https://media.giphy.com/media/zJ30sRvo14bja/giphy.gif",
+			"https://78.media.tumblr.com/6704ffe905dff5e8688dc3b1d3996e33/tumblr_nufu9s7r7k1uyl0l9o1_500.gif",
+			"https://78.media.tumblr.com/e105dd34531babcebf0cde283d83987f/tumblr_n9eigtoddw1s4cujlo1_500.gif"
+		]
+	},
+	"baka" : {
+		"text" : [
+			"$1 *называет бакой* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/b8d6d943a14a3e4a7329924c74161fb7/tenor.gif",
+			"https://media1.tenor.com/images/99ed452a33c03a91c37083df7eb2419f/tenor.gif",
+			"https://media1.tenor.com/images/9fd0700c04e81d083048d7100803e815/tenor.gif",
+			"http://i0.kym-cdn.com/photos/images/newsfeed/000/923/414/1ee.gif"
+		]
+	},
+	"ignore" : {
+		"text" : [
+			"$1 *игнорирует* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/112c2abcf585b37e6c6950ebc3ab4168/tenor.gif",
+			"https://media.giphy.com/media/rFvtiIevmj0zu/giphy.gif",
+			"http://i0.kym-cdn.com/photos/images/original/000/906/455/51f.gif",
+			"https://78.media.tumblr.com/eb90caf5fe561e609dd5a9040e34186f/tumblr_nq2cvgKtjZ1un9vr1o2_500.gif",
+			"https://i.imgur.com/dtHhUx3.gif"
+		]
+	},
+	"cry" : {
+		"text" : [
+			"$2 *заставляет плакать* $1"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/b7ae6c694085e0b294cdd938278c70c7/tenor.gif",
+			"https://media1.tenor.com/images/82e9e7713acefba2eccc892a0abe7493/tenor.gif",
+			"https://media1.tenor.com/images/d78422a6e7547b87979025afb7d2c535/tenor.gif",
+			"https://media1.tenor.com/images/ecf674c5e0ed2fdf0260ade4fad2146f/tenor.gif",
+			"https://i.giphy.com/media/oAW9QPkQwJqJq/giphy.gif",
+			"https://media.giphy.com/media/UIDPtGNzr2zRu/giphy.gif",
+			"http://media.giphy.com/media/7BOWzjYhMPJLy/giphy.gif"
+		]
+	},
+	"cuddle" : {
+		"text" : [
+			"$1 *прижимается к* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/5845f40e535e00e753c7931dd77e4896/tenor.gif",
+			"https://media1.tenor.com/images/6beb6a29603bb0769408c8ff32e035ab/tenor.gif",
+			"https://media1.tenor.com/images/639164bbda71fded270d6ae52a368eb7/tenor.gif",
+			"https://media1.tenor.com/images/1830a5c99b742ccd2fe527ec93e492d1/tenor.gif",
+			"https://media1.tenor.com/images/ad6fe7b9cd00b01b9e7d48ab6b792b5f/tenor.gif",
+			"https://media1.tenor.com/images/26b91d49ece30b8ec732ac5ba3ad8e2d/tenor.gif",
+			"https://media.giphy.com/media/Jt2hhu6CtGHte/giphy.gif",
+			"https://pa1.narvii.com/5922/9b1f7a1f2ec0b0181172e9cde4308ac4d07a8417_hq.gif",
+			"https://media.giphy.com/media/ULDfgEGR3kehW/giphy.gif",
+			"https://media.giphy.com/media/NTBFwChJg9lKM/giphy.gif",
+			"https://thumbs.gfycat.com/ImperfectFabulousBluewhale-max-1mb.gif",
+			"https://lh3.googleusercontent.com/-Ufg1LxrW6s0/V8QRFHRAlRI/AAAAAAACMGc/9pKJs4rwF6obWGu8wJNF-3Iu2SO0tXEGwCJoC/w506-h750/Anime-Non-Non-Biyori-Ichijou-Hotaru-Koshigaya-Komari-1243325.gif"
+		]
+	},
+	"dance" : {
+		"text" : [
+			"$1 *танцует вместе с* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/b7l5cvG94cqo8/giphy.gif",
+			"https://media.giphy.com/media/euMGM3uD3NHva/giphy.gif",
+			"https://media.giphy.com/media/9gxhLXyJXqAhi/giphy.gif",
+			"https://media.giphy.com/media/1448TKNMMg4BFu/giphy.gif",
+			"https://media.giphy.com/media/11lxCeKo6cHkJy/giphy.gif",
+			"https://media.giphy.com/media/U4CH4BYqpxlEQ/giphy.gif",
+			"http://media.indiedb.com/cache/images/groups/1/1/84/thumb_620x2000/02-OP-2.gif",
+			"http://media.giphy.com/media/EAOTD2L0qyvhm/giphy.gif",
+			"http://media.giphy.com/media/938JXzfcl714I/giphy.gif",
+			"https://media.giphy.com/media/TF1Az4ZjffK80/giphy.gif",
+			"https://media.giphy.com/media/roym7Gv1DVK0/giphy.gif",
+			"http://3.bp.blogspot.com/-VfIDEBGn9Gw/TaBUrYAWUZI/AAAAAAAAAmM/awcUvfHyPUE/s1600/Hayate_no_Gotoku_-_Caramelldansen.gif",
+			"https://img.buzzfeed.com/buzzfeed-static/static/2014-01/enhanced/webdr06/29/10/anigif_enhanced-31738-1391010205-4.gif",
+			"https://pa1.narvii.com/6115/a1ed9d29332a87ff81c373106db45d61df7fbbf6_hq.gif",
+			"http://i0.kym-cdn.com/photos/images/newsfeed/001/153/506/bcd.gif",
+			"https://img.gifmagazine.net/gifmagazine/images/677019/original.gif",
+			"https://media1.tenor.com/images/b3ee0c82bf87b4cfce2067ebfa658828/tenor.gif"
+		]
+	},
+	"fail" : {
+		"text" : [
+			"$1 *->* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/86655e4378b68f71d503f41334cfb931/tenor.gif",
+			"https://media.giphy.com/media/aAoODH4CbpEbe/giphy.gif",
+			"http://cdn-9chat-fun.9cache.com/media/photo/amvDKMBq1_480wa_v1.gif",
+			"https://media.tenor.com/images/4ceb0319e9418d58731c7914c8083783/tenor.gif",
+			"https://media.giphy.com/media/TgaaKVCIxd5Is/giphy.gif",
+			"https://s8.favim.com/orig/150811/adorable-anime-gif-anime-girl-gif-Favim.com-3099979.gif"
+		]
+	},
+	"happy" : {
+		"text" : [
+			"$1 *делится счастьем с* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/1830a5c99b742ccd2fe527ec93e492d1/tenor.gif",
+			"https://i.pinimg.com/originals/36/09/5c/36095cbb64da088e7c487eca8623ccc4.gif",
+			"https://78.media.tumblr.com/506618dfb5c44d703ae59f8f3c0c3cf0/tumblr_n6bc0k8esq1r922azo1_500.gif",
+			"https://media.giphy.com/media/3Cm8cxtSHqu6Q/giphy.gif"
+		]
+	},
+	"hug" : {
+		"text" : [
+			"$1 *обнимает* $2"
+		],
+		"gif" : [
+			"https://pa1.narvii.com/5763/9cca52f801a8d4eaaa1d40d8c00a7912f46d2d27_hq.gif",
+			"https://media1.tenor.com/images/506aa95bbb0a71351bcaa753eaa2a45c/tenor.gif",
+			"https://media1.tenor.com/images/72627a21fc298313f647306e6594553f/tenor.gif",
+			"https://media1.tenor.com/images/b8b49eff95a27e2d4d9a89f1c99d9edd/tenor.gif",
+			"https://media1.tenor.com/images/7db5f172665f5a64c1a5ebe0fd4cfec8/tenor.gif",
+			"https://media1.tenor.com/images/b87f8b1e2732c534a00937ffb24baa79/tenor.gif",
+			"http://i0.kym-cdn.com/photos/images/newsfeed/000/935/627/3a5.gif",
+			"http://pa1.narvii.com/6627/2302ff91d9f42d648b05ed2810e90a25abba6c35_hq.gif",
+			"https://78.media.tumblr.com/tumblr_lmokrit0uY1qafrh6.gif",
+			"https://myanimelist.cdn-dena.com/s/common/uploaded_files/1460988091-6e86cd666a30fcc1128c585c82a20cdd.gif",
+			"https://i.giphy.com/media/lrr9rHuoJOE0w/giphy.gif",
+			"https://media1.tenor.com/images/b8b017d93d2e24d43f48ac6c63464a9c/tenor.gif",
+			"https://media.giphy.com/media/pXQhWw2oHoPIs/giphy-downsized-large.gif",
+			"http://gifimage.net/wp-content/uploads/2017/10/cute-anime-hug-gif-7.gif",
+			"https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/1/15/Tumblr_m066xoISk41r6owqs.gif",
+			"https://i.giphy.com/media/mLEKfC5xXJbyM/source.gif",
+			"https://78.media.tumblr.com/tumblr_m980e4PUNb1rp4uy8o1_500.gif",
+			"https://cdn.weeb.sh/images/BJ0sOOmDZ.gif",
+			"https://cdn.weeb.sh/images/BJx2l0ttW.gif",
+			"https://cdn.weeb.sh/images/rk6PsvOUM.gif",
+			"https://cdn.weeb.sh/images/ryjJFdmvb.gif"
+		]
+	},
+	"interest" : {
+		"text" : [
+			"$2 *интересует* $1"
+		],
+		"gif" : [
+			"http://i.imgur.com/76AdzYs.gif",
+			"https://media.giphy.com/media/mPlsO1aVXe2fS/giphy.gif"
+		]
+	},
+	"kiss" : {
+		"text" : [
+			"$1 *целует* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/4b5d5afd747fe053ed79317628aac106/tenor.gif",
+			"https://media1.tenor.com/images/946c99140a145a1d0d449cc153a9c010/tenor.gif",
+			"https://i.giphy.com/media/ugTBkjevqLfmE/giphy.gif",
+			"https://media1.tenor.com/images/cd0d06e057bf6a01cd5f9bb5d7971b08/tenor.gif"
+		]
+	},
+	"alone" : {
+		"text" : [
+			"$1 *одиноко смотрит на* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/4bd4a65924674d6d641868cc53ea2839/tenor.gif",
+			"https://media1.tenor.com/images/58b7faf0aff2fcbabda65a8b971a40dc/tenor.gif",
+			"https://media1.tenor.com/images/a2b501c16f939c3cbe952dada6f7b7e9/tenor.gif"
+		]
+	},
+	"love" : {
+		"text" : [
+			"$1 *любит* $2"
+		],
+		"gif": [
+			"https://media1.tenor.com/images/42922e87b3ec288b11f59ba7f3cc6393/tenor.gif",
+			"https://media.giphy.com/media/d5YvW6O5RswxO/giphy.gif",
+			"https://media1.tenor.com/images/f2805f274471676c96aff2bc9fbedd70/tenor.gif",
+			"https://i.giphy.com/media/NIVEKTtH5bhuw/giphy.gif",
+			"https://media.giphy.com/media/12MEJ2ArZc23cY/source.gif",
+			"https://i.imgur.com/pb0ODYa.gif"
+		]
+	},
+	"neko" : {
+		"text" : [
+			"$1 *->* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/60cKUwCjzNY1a/giphy.gif",
+			"https://media.giphy.com/media/Uo43d4MiXA6zu/giphy.gif",
+			"https://media.giphy.com/media/4fwROqgPzt504/giphy.gif",
+			"https://media.giphy.com/media/2710CjxYwir7O/giphy.gif",
+			"https://media.giphy.com/media/IKe9erigqK7fi/giphy.gif",
+			"https://media.giphy.com/media/ffY6432VpuV6E/giphy.gif"
+		]
+	},
+	"pat" : {
+		"text" : [
+			"$1 *гладит по голове* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/cb2f75a027d295805797e5661dcf38a2/tenor.gif",
+			"https://media1.tenor.com/images/e2805c96da892472e1b668cdcad12d8e/tenor.gif",
+			"https://media.giphy.com/media/109ltuoSQT212w/giphy.gif",
+			"https://media.giphy.com/media/xLm9fux5DSodq/giphy.gif",
+			"https://media.giphy.com/media/iGZJRDVEM6iOc/giphy.gif",
+			"http://i.imgur.com/eOJlnwP.gif",
+			"http://giant.gfycat.com/PoisedWindingCaecilian.gif",
+			"https://i.pinimg.com/originals/2c/6e/4b/2c6e4bb81e44fe1a0b8c599f292e2be5.gif",
+			"https://i.imgur.com/XfnisR6.gif"
+		]
+	},
+	"poke" : {
+		"text" : [
+			"$1 *тыкает* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/pWd3gD577gOqs/giphy.gif",
+			"https://media.giphy.com/media/WvVzZ9mCyMjsc/giphy.gif",
+			"https://cdn.weeb.sh/images/rJzUe1FwZ.gif",
+			"https://cdn.weeb.sh/images/r1ALxJKwW.gif",
+			"https://cdn.weeb.sh/images/H1fMRpYtb.gif",
+			"https://cdn.weeb.sh/images/SyQzRaFFb.gif",
+			"https://cdn.weeb.sh/images/BJhIekKwb.gif",
+			"https://cdn.weeb.sh/images/Hk2HekKD-.gif",
+			"https://cdn.weeb.sh/images/HkjjLb0rM.gif",
+			"https://cdn.weeb.sh/images/BkcSekKwb.gif",
+			"https://cdn.weeb.sh/images/SyJzRTKFW.gif",
+			"https://cdn.weeb.sh/images/rktSlkKvb.gif",
+			"https://cdn.weeb.sh/images/rkeaUeJKD-.gif",
+			"https://cdn.weeb.sh/images/rJ0hlsnR-.gif"
+		]
+	},
+	"shock" : {
+		"text" : [
+			"$1 *в шоке от* $2"
+		],
+		"gif" : [
+			"https://i.giphy.com/media/atyNuQv4pUOxG/giphy.gif",
+			"https://78.media.tumblr.com/6ab3f8e5cb874ab702815cd9514cdd79/tumblr_n92pljJGak1s5mgubo1_500.gif",
+			"https://erisischanadventure.files.wordpress.com/2015/05/shocked.gif"
+		]
+	},
+	"shy" : {
+		"text" : [
+			"$2 *смущает* $1",
+			"$1 *смущается из-за* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/1gbQIeNzZxcSk/giphy.gif",
+			"https://media.giphy.com/media/BkqSYWqv8Zfva/giphy.gif",
+			"https://media.giphy.com/media/12DrHDhr5dTjgs/giphy.gif",
+			"https://media.giphy.com/media/eNVI4Ue1MpjWg/giphy.gif",
+			"https://vignette.wikia.nocookie.net/degrassi/images/d/d7/Tsugumi_precious.gif",
+			"https://thumbs.gfycat.com/AfraidMistyGreatwhiteshark-max-1mb.gif",
+			"https://media.giphy.com/media/dkvGrfQ6ryIAU/giphy.gif",
+			"http://i.imgur.com/fxZdy3h.gif",
+			"https://media1.tenor.com/images/c271e69eaeaab17fb096ccb3c7fedb6d/tenor.gif",
+			"https://media.giphy.com/media/NPcbTHBxD7dAY/source.gif",
+			"https://media.giphy.com/media/tQWT183CTqHYI/source.gif"
+		]
+	},
+	"slap" : {
+		"text" : [
+			"$1 *бьёт* $2"
+		],
+		"gif" : [
+			"http://i0.kym-cdn.com/photos/images/newsfeed/000/940/326/086.gif",
+			"https://media1.tenor.com/images/1cf84bf514d2abd2810588caf7d9fd08/tenor.gif",
+			"https://media.giphy.com/media/jLeyZWgtwgr2U/giphy.gif",
+			"https://media.giphy.com/media/Zau0yrl17uzdK/giphy.gif",
+			"https://media.giphy.com/media/A18RepMeVu2eQ/source.gif",
+			"https://media.giphy.com/media/CPmowQK5Litu8/source.gif",
+			"https://pa1.narvii.com/5762/ff49210ebdc418fba31a5819c1265749e740893b_hq.gif"
+		]
+	},
+	"smug" : {
+		"text" : [
+			"$1 *посмеивается над* $2"
+		],
+		"gif" : [
+			"https://i.pinimg.com/originals/9a/3b/f4/9a3bf4ed68ed536542d047f221fea6f0.gif",
+			"https://i.warosu.org/data/g/img/0594/88/1489973466923.gif",
+			"https://media.giphy.com/media/UNHwFa4XMz79K/giphy.gif"
+		]
+	},
+	"squeeze" : {
+		"text" : [
+			"$1 *тискает* $2",
+			"$1 *трогает за щёки* $2"
+		],
+		"gif" : [
+			"https://78.media.tumblr.com/b5c723d99ab6a885364a83cb988b41d1/tumblr_nezyz8dkr81tkv03zo1_500.gif",
+			"https://media1.tenor.com/images/1dfbcdcc996ee2832cbe743330702fa7/tenor.gif",
+			"https://media.giphy.com/media/ruYMwmyOtpIxa/giphy.gif",
+			"https://media.giphy.com/media/e01lZEJ6WZjiw/giphy.gif",
+			"https://media.giphy.com/media/guSbERilLjuQU/giphy.gif"
+		]
+	},
+	"surprise" : {
+		"text" : [
+			"$2 *удивляет* $1"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/cxRGi2nJb3cBy/giphy.gif",
+			"https://i.giphy.com/media/Dlm4Eb0S4vfrO/giphy.gif",
+			"https://media.giphy.com/media/cbJcA68H5lPEY/giphy.gif",
+			"https://media.giphy.com/media/11BIVawE5FrDq/giphy.gif"
+		]
+	},
+	"just" : {
+		"text" : [
+			"$1 *->* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/bdac2249540526ec80aff220c8553c8d/tenor.gif",
+			"https://media.giphy.com/media/P8Fo5pBoNPTkk/giphy.gif",
+			"https://data.whicdn.com/images/225215793/original.gif"
+		]
+	},
+	"yawn" : {
+		"text" : [
+			"*->*"
+		],
+		"gif" : [
+			"https://lh3.googleusercontent.com/-Tghzzm_moYI/Vpv9Tim48-I/AAAAAAAEHcg/IB_oaMQRHJc/w506-h284/luckyyy%2Bop.gif",
+			"https://orig00.deviantart.net/9f06/f/2016/125/e/f/k_on__ritsu_is_bored___gif_animation_by_kyoflameashhylden-da1e0f9.gif",
+			"https://media.giphy.com/media/Bw4ECQSe8tkT6/giphy.gif",
+			"https://media.giphy.com/media/ib908PKTsuJXi/giphy.gif",
+			"https://nekketsunikki.files.wordpress.com/2013/09/prad3-25-wakana-yawning-gif.gif",
+			"https://78.media.tumblr.com/d01b8fbef3330601513a0f0eacc83276/tumblr_nymaloSqjh1tydz8to1_500.gif",
+			"http://1.bp.blogspot.com/-c7IYwWX2qX0/T2EHko0u50I/AAAAAAAABEM/mO5m86a7B2g/s1600/tumblr_ln2k4nc5VS1qejrr2o1_500_large.gif",
+			"http://pa1.narvii.com/5778/1c2cb88920e9ab85168b936d74e81679fd7a2e38_hq.gif",
+			"https://media.giphy.com/media/iQHDtnUZ7gxI4/giphy.gif",
+			"https://i.giphy.com/media/kgqNxRFENcp0I/giphy.gif"
+		]
+	},
+	"yay" : {
+		"text" : [
+			"$1 *делится радостью с* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/bd5e4f3a51515ed0ed3e41378f71d503/tenor.gif",
+			"https://media1.tenor.com/images/0ffa8ec3da79658d13d3531ab94381a0/tenor.gif",
+			"https://pa1.narvii.com/5672/8f859353df86ac2a58698006f435e1d7aba1f63e_hq.gif",
+			"http://i.giphy.com/4xYhMRFqGjoFG.gif"
+		]
+	},
+	"sleep" : {
+		"text" : [
+			"$1 *->* $2"
+		],
+		"gif" : [
+			"http://4.bp.blogspot.com/-ZO-pzpXSwZ4/Vsv3g_QDCcI/AAAAAAAACYs/NcUKIqsZRuc/s1600/rA6eBjt.gif",
+			"https://media.giphy.com/media/FTSlmMfZobvy0/giphy.gif"
+		]
+	},
+	"tired" : {
+		"text" : [
+			"$1 *->* $2"
+		],
+		"gif" : [
+			"https://media.giphy.com/media/CpO7VHeeCfcUo/giphy.gif"
+		]
+	},
+	"angry" : {
+		"text" : [
+			"$1 *злится на* $2"
+		],
+		"gif" : [
+			"https://media1.tenor.com/images/3304de583bb3bb948ba0d32c0ca252f9/tenor.gif",
+			"https://media.giphy.com/media/2kJY941e6bBVm/giphy.gif"
+		]
+	}
+}
