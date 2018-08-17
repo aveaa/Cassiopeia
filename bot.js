@@ -344,7 +344,7 @@ if(['sms'].includes(command)) {
             });
         });
     }
-p+'cry' {
+if(message.content.startsWith(p+"cry")){
     name: __filename.slice(__dirname.length + 1).split(".")[0],
     description: "Плакать",
     aliases: ["suffer"],
