@@ -344,6 +344,33 @@ if(['sms'].includes(command)) {
             });
         });
     }
+p+'cry' {
+    name: __filename.slice(__dirname.length + 1).split(".")[0],
+    description: "Плакать",
+    aliases: ["suffer"],
+    usage: "[@]",
+    guildOnly: true,
+	hide: true,
+	group: __dirname.split(/[\\/]/)[__dirname.split(/[\\/]/).length-1],
+    execute(message, args) {
+        var victim = message.mentions.users.first()
+
+        var { img, msg } = tools.getGif(this.name);
+
+        var embed = new Discord.RichEmbed()
+            if (!!victim) {
+				embed.setDescription(msg.replace(/\$1/g, message.author).replace(/\$2/g, victim))
+			};
+            
+            embed.setImage(img);
+
+            embed.setColor(`RANDOM`);
+
+            var memberRequest = message.guild.members.get(message.author.id);
+            embed.setFooter(`Запрос от ${(!memberRequest || !memberRequest.nickname) ? message.author.username : memberRequest.nickname} | ${prefix}${this.name}`, message.author.displayAvatarURL);           
+
+        message.channel.send({embed});
+    }
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
