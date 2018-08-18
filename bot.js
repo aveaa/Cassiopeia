@@ -385,10 +385,5 @@ if(message.content.startsWith(p + `help`)) {
 }});
 //статус
     client.on('ready', () => {
-<<<<<<< HEAD
         client.user.setPresence({ game: { name: `за MoonChat | ;help`, type: 3 } }).catch();
     });
-=======
-        client.user.setPresence({ game: { name: `за Star ⛦ System | ;help`, type: 3 } }).catch();
-    });
->>>>>>> 20df570c3837859c96a546035b56f396eb0b7bf4
