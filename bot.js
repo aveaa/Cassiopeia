@@ -8,7 +8,7 @@ let Kosmo = '477045398263955456';
 let Smotri = '477045398263955456';
 let Chmute = '477065648544153600';
 let VoiceMute = '477065632546816000';
-const server_name = 'Star ⛦ System '
+const server_name = 'MoonChat '
 //Функции
 function randomInteger(min, max) {
     max++
@@ -385,5 +385,5 @@ if(message.content.startsWith(p + `help`)) {
 }});
 //статус
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `за Star ⛦ System | ;help`, type: 3 } }).catch();
+        client.user.setPresence({ game: { name: `за MoonChat | ;help`, type: 3 } }).catch();
     });
