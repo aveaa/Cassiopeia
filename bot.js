@@ -280,7 +280,6 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **прижал(а)ся к** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
@@ -328,7 +327,6 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **пощекотал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
@@ -353,7 +351,6 @@ if(['sms'].includes(command)) {
 			"https://media.giphy.com/media/2kJY941e6bBVm/giphy.gif"
 		];
 		const selfbite = new Discord.RichEmbed()
-		.setTitle(':3')
                         .setDescription(`${user} злится`)
                         .setImage((urls[Math.floor(Math.random() * urls.length)]))
                         .setColor('RANDOM')
@@ -363,7 +360,6 @@ if(['sms'].includes(command)) {
                             message.react("😠")
                         }).catch(function() {});
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **злится на** ${user1}`)
                         .setImage((urls[Math.floor(Math.random() * urls.length)]))
                         .setColor('RANDOM')
@@ -387,10 +383,9 @@ if(['sms'].includes(command)) {
                         .setFooter(server_name+" | ;bite @User") 
                         .setTimestamp(); 
         if (!user1 || user1.id === user.id) return message.channel.send(selfbite).then(function(message) {
-                            message.react("🤣")
+                            message.react("😱")
                         }).catch(function() {});
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **укусил(а)** ${user1}`)
                         .setImage((urls[Math.floor(Math.random() * urls.length)]))
                         .setColor('RANDOM')
@@ -398,7 +393,7 @@ if(['sms'].includes(command)) {
                         .setTimestamp(); 
                         message.channel.send(embed
                         ).then(function(message) {
-                            message.react("🤣")
+                            message.react("😱")
                         }).catch(function() {});
     }
 	if (message.content.startsWith(p + `smoke`)) {
@@ -423,7 +418,7 @@ if(['sms'].includes(command)) {
 			.setFooter(server_name+"| ;sleep")
 		     .setTimestamp();
                     msg.edit({embed}).then(function(message) {
-                            message.react("🚬")
+                            message.react("💤")
                         }).catch(function() {});
         });
     }
@@ -467,7 +462,7 @@ if(['sms'].includes(command)) {
 			.setFooter(server_name+"| ;dance")
 		     .setTimestamp();
                     msg.edit({embed}).then(function(message) {
-                            message.react("🚬")
+                            message.react("👯")
                         }).catch(function() {});
         });
     }
