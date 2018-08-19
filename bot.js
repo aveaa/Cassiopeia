@@ -566,6 +566,22 @@ message.react("😛")
 }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `||test`)) {
+    message.delete();
+    let user = message.author;
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://media.discordapp.net/attachments/466199224254595072/480754949689442309/2x.gif"
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`**Тест бота**`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM');
+  msg.edit({embed}).then(function(message) {
+          message.react("☑")
+      }).catch(function() {});
+});
+}
     if(message.content.startsWith(p + 'poll')) {
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
