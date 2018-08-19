@@ -599,7 +599,7 @@ let embed = new Discord.RichEmbed()
                 message.react("🔘")
             }).catch(function() {});
         }
-        robot.on("message", message => {
+        client.on("message", message => {
             if (message.content.startsWith(p + 'eval')) {
                 if(message.author.id !== '406343162651738112','378915782270124033')
                            return message.reply("**Ты не можешь использовать это!**")
