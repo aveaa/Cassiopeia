@@ -369,7 +369,7 @@ if(['sms'].includes(command)) {
                         .setTimestamp(); 
                         message.channel.send(embed
                         ).then(function(message) {
-                            message.react("🤣")
+                            message.react("😱")
                         }).catch(function() {});
     }
     if(message.content.startsWith(p + 'poll')) {
