@@ -500,6 +500,7 @@ msg.edit({embed}).then(function(message) {
 });
 }
 if (message.content.startsWith(p + `sad`)) {
+    let user = message.author;
     message.channel.send('Загрузка...').then(msg => {
         const urls = [
 "https://avatars.mds.yandex.net/get-pdb/805781/67906d0f-bda7-47a3-92d2-4ce1b4f728fd/orig",
@@ -521,7 +522,7 @@ if (message.content.startsWith(p + `sad`)) {
 "https://i.pinimg.com/originals/19/42/07/194207dd9df329dcc66bf0bc07eefe8c.gif"
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${message.author.username} **Ушел в печаль**`)
+      .setDescription(`${user} **Ушел в печаль**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;sad")
