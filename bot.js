@@ -328,7 +328,6 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **пощекотал(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
@@ -351,7 +350,6 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
 		const selfbite = new Discord.RichEmbed()
-		.setTitle(':3')
                         .setDescription(`${user} **укусил(а)** себя`)
                         .setImage("https://78.media.tumblr.com/bbea36e4585df159eb4a339efc97313a/tumblr_ormo8ikFnO1wn2b96o1_500.gif")
                         .setColor('RANDOM')
@@ -361,7 +359,6 @@ if(['sms'].includes(command)) {
                             message.react("🤣")
                         }).catch(function() {});
                     let embed = new Discord.RichEmbed()
-                        .setTitle(':3')
                         .setDescription(`${user} **укусил(а)** ${user1}`)
                         .setImage((urls[Math.floor(Math.random() * urls.length)]))
                         .setColor('RANDOM')
