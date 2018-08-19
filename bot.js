@@ -599,6 +599,38 @@ let embed = new Discord.RichEmbed()
                 message.react("🔘")
             }).catch(function() {});
         }
+        robot.on("message", message => {
+            if (message.content.startsWith(p + 'eval')) {
+                if(message.author.id !== '406343162651738112','378915782270124033')
+                           return message.reply("**Ты не можешь использовать это!**")
+          const code = message.content.split(" ").slice(1).join(" ");
+                  try {
+                   let evaled = eval(code);
+                   if (!code) {
+                       return message.channel.send("**нужна больше кода!**");
+                   }
+              
+                   if (typeof evaled !== 'string')
+                     evaled = require('util').inspect(evaled);
+                  
+                     const embed = new Discord.RichEmbed()
+                     .setTitle(`EVAL ✅`)
+                 
+                     .setColor("0x4f351")
+                     .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
+                 
+                   message.channel.send({embed});
+                 } catch (err) {
+                   const embed = new Discord.RichEmbed()
+                   .setTitle(`EVAL ❌`)
+            
+                   .setColor("0xff0202")
+                   .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(err)}\`\`\``)
+              
+                   message.channel.send({embed});
+                 }
+            }
+            })
         if (message.author.bot) return;
         if (message.content.startsWith(p + 'ping')) {
         const embed = new Discord.RichEmbed()
