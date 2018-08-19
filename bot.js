@@ -571,7 +571,8 @@ if (message.content.startsWith(p + `||test`)) {
     let user = message.author;
     message.channel.send('Загрузка...').then(msg => {
         const urls = [
-"https://media.discordapp.net/attachments/466199224254595072/480754949689442309/2x.gif"
+"https://media.discordapp.net/attachments/466199224254595072/480754949689442309/2x.gif",
+"https://media.discordapp.net/attachments/466199224254595072/480754182325010442/1x.gif"
 ];
 let embed = new Discord.RichEmbed()
       .setDescription(`**Тест бота**`)
