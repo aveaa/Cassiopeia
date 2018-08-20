@@ -695,6 +695,33 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `sex`,'six')) {
+    if (!message.channel.nsfw) return message.channel.send("**Иди в nsfw!**");
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3VG0hwWZdCDbyyBRyYKQ6A5YLvV64SaQEFhb8-f3gs_TQJIwdbQ",
+"https://78.media.tumblr.com/tumblr_mad123wCwR1rdw7hvo1_500.gif",
+"https://images.sex.com/images/pinporn/2013/09/20/620/3677439.gif",
+"https://78.media.tumblr.com/tumblr_mad123wCwR1rdw7hvo1_500.gif",
+"https://images.sex.com/images/pinporn/2013/08/23/620/3492045.gif",
+"http://img0.joyreactor.com/pics/post/xxx-files-fandoms-Hentai-anime-1367984.gif",
+"http://juicygif.com/albums/userpics/2015y/02/26/15/1/8649-submit-fine-gifs-to-my-blog-a-world-of-hentai-gifssave-amp-play-it-offline-on-iphone.gif",
+"https://static4.hentai-image.com/upload/20170828/330/336999/1.gif",
+"https://x.imagefapusercontent.com/u/ron2007/3601487/1845103806/006.gif"
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **выебал** ${user1}`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;sex @user")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("👄")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
