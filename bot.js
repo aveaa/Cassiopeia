@@ -158,7 +158,7 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
         if (!user1 || user1.id === user.id) {
-            user = bot.user;
+            user = bot.client.user;
             user1 = message.author;
         }
         message.channel.send('Загрузка...').then(msg => {
@@ -186,7 +186,7 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
         if (!user1 || user1.id === user.id) {
-            user = bot.user;
+            user = bot.client.user;
             user1 = message.author;
         }
         message.channel.send('Загрузка...').then(msg => {
@@ -214,7 +214,7 @@ if(['sms'].includes(command)) {
             let user = message.author;
             let user1 = message.mentions.users.first();
             if (!user1 || user1.id === user.id) {
-                user = bot.user;
+                user = bot.client.user;
                 user1 = message.author;
             }
             message.channel.send('Загрузка...').then(msg => {
@@ -242,7 +242,7 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
         if (!user1 || user1.id === user.id) {
-            user = bot.user;
+            user = bot.client.user;
             user1 = message.author;
         }
         message.channel.send('Загрузка...').then(msg => {
@@ -270,7 +270,7 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
         if (!user1 || user1.id === user.id) {
-            user = bot.user;
+            user = bot.client.user;
             user1 = message.author;
         }
         message.channel.send('Загрузка...').then(msg => {
@@ -317,7 +317,7 @@ if(['sms'].includes(command)) {
         let user = message.author;
         let user1 = message.mentions.users.first();
         if (!user1 || user1.id === user.id) {
-            user = bot.user;
+            user = bot.client.user;
             user1 = message.author;
         }
         message.channel.send('Загрузка...').then(msg => {
