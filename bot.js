@@ -594,6 +594,40 @@ message.react("😛")
 }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `nom`)) {
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"http://yeinjee.com/wp-content/uploads/2014/07/non-non-biyori-1.gif",//1
+"https://78.media.tumblr.com/8c4cf9adafa72ace226f08ab4c3c9c20/tumblr_obpdd2MJlx1qmgtx5o1_500.gif",//2
+"https://i.pinimg.com/originals/d6/82/df/d682df05def2a153f9e87bba4ee7b934.gif",//3
+"https://media.giphy.com/media/u2Iq2GbjB0N2g/giphy.gif",//4
+"https://media.giphy.com/media/RS8JlmVuNKE5a/giphy.gif",//5
+"https://i.warosu.org/data/g/img/0439/60/1409896417316.gif",//6
+"https://i.gifer.com/2yNA.gif",//7
+"https://orig00.deviantart.net/0010/f/2015/347/c/3/yuki_nagato_nom_nom_nom______gif_animation_by_kyoflameashhylden-d9k1did.gif",//8
+"https://i.imgur.com/Ryy3D7r.gif",//9
+"https://media.giphy.com/media/Pl4LoOqZL8skE/source.gif",//10
+"http://3.bp.blogspot.com/-UDpzj0tcQrA/T5uavPPjO8I/AAAAAAAADAQ/8HbCYDj0API/s1600/acchikocchi03.gif",//11
+"https://steamusercontent-a.akamaihd.net/ugc/820063037363720336/D369DC5DF900BC55354DEC4FB5175AE7F4AE5DDC/",//12
+"https://gifer.com/i/2uIY.gif",//13
+"https://i.chzbgr.com/full/8972792576/h27BBD3A2/",//14
+"https://media.tenor.com/images/ff8ff7fa741d8c3fc23cc3e8fe20697d/tenor.gif",//15
+"https://img.gifmagazine.net/gifmagazine/images/698873/original.gif",//16
+"https://media1.tenor.com/images/26beab5ca39fba753a2de57b1d74e519/tenor.gif?itemid=5215437"//17
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **Дал поесть**${user1}`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;nom @user")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("🍱")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
