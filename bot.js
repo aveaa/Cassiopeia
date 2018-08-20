@@ -628,6 +628,40 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `hi`)) {
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://orig00.deviantart.net/8d1d/f/2010/319/4/b/hi_____animated_by_0febris0-d2wu3lv.gif",//1
+"https://steamusercontent-a.akamaihd.net/ugc/1617175662597177927/732757601CDBF2E52C41EF3349035A337BB119D7/",//2
+"https://image.noelshack.com/fichiers/2018/17/3/1524685070-df0a9rx.gif",//3
+"https://thumbs.gfycat.com/HatefulBlindFunnelweaverspider-size_restricted.gif",//4
+"https://thumbs.gfycat.com/AdorableFormalAngwantibo-size_restricted.gif",//5
+"https://pa1.narvii.com/6505/ad5549ff5f252cd35e393f88c55d474ab83fd46d_hq.gif",//6
+"http://gifimage.net/wp-content/uploads/2017/10/hi-anime-gif-9.gif",//7
+"https://kingmarsblog.files.wordpress.com/2016/08/c5612569563abae86b811071616e4c07f5b3aa18_hq.gif?w=882",//8
+"https://media.tenor.com/images/b96f06f81933f49b6d24577017eb4edd/tenor.gif",//9
+"https://media.giphy.com/media/yyVph7ANKftIs/giphy.gif",//10
+"https://media1.tenor.com/images/c2e21a9d8e17c1d335166dbcbe0bd1bf/tenor.gif?itemid=5459102",//11
+"http://gifimage.net/wp-content/uploads/2017/10/hi-anime-gif-11.gif",//12
+"https://data.whicdn.com/images/233897767/original.gif",//13
+"http://i.imgbox.com/AYqk4UJk.gif",//14
+"https://cdn105.picsart.com/203730462001202.gif?r1024x1024",//15
+"https://thumbs.gfycat.com/HauntingNeighboringBarracuda-max-1mb.gif",//16
+"http://pa1.narvii.com/5935/a557baffc06658c5b3c2932eb0bc496cb112d04c_00.gif"//17
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **Приветствует всех!**`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;hi ")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("🍱")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
