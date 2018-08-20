@@ -662,6 +662,39 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `beer`)) {
+    let user = message.author;
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://gifer.com/i/5TNn.gif",//1
+"https://vignette.wikia.nocookie.net/simpsons/images/2/29/Beer_explosion.gif/revision/latest?cb=20170620212014",//2
+"https://pa1.narvii.com/5837/c09e2864bfcbd5bf8cc734c5fd69422296c44608_hq.gif",//3
+"https://media1.tenor.com/images/a3ec9393688af6debf5625d77c0ec401/tenor.gif?itemid=5474067",//4
+"https://i.gifer.com/IcT8.gif",//5
+"https://thumbs.gfycat.com/ImportantTestyLacewing-max-1mb.gif",//6
+"http://i.imgur.com/k977t5w.gif",//7
+"https://gifer.com/i/Qvi.gif",//8
+"http://25.media.tumblr.com/09a7dbfe31d3855794c5fb7215264fa7/tumblr_mfrzxbxoXq1s1xlbuo1_500.gif",//9
+"https://thumbs.gfycat.com/CalmEminentDromedary-size_restricted.gif",//10
+"https://i.pinimg.com/originals/fa/6e/5c/fa6e5cedcaa621052ec865fab6d33ac5.gif",//11
+"https://media.giphy.com/media/zbMUQKqHZQ4eY/giphy.gif",//12
+"https://pa1.narvii.com/5843/602066d1cc987df37c05152d5756c533a73c8947_hq.gif",//13
+"https://data.whicdn.com/images/247827296/original.gif",//14
+"https://media1.tenor.com/images/f6ae078aca1b3db925a76afebe1749ef/tenor.gif?itemid=7460617",//15
+"https://3.bp.blogspot.com/-pjrh7AyOG6Y/VqMgqo8q4tI/AAAAAAAAW1I/MRCIdMLRJ9Y/s1600/Omake%2BGif%2BAnime%2B-%2BGATE%2B-%2BEpisode%2B15%2B-%2BItami%2BChugs%2BBeer.gif",//16
+"https://media1.tenor.com/images/4657ab00910adb50ff814f8a54f210dd/tenor.gif?itemid=5081999"//17
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **Выпел пивасика**`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;beer")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("🍺")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
