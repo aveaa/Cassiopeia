@@ -157,10 +157,6 @@ if(['sms'].includes(command)) {
         message.delete();
         let user = message.author;
         let user1 = message.mentions.users.first();
-        if (!user1 || user1.id === user.id) {
-            user = bot.client.user;
-            user1 = message.author;
-        }
         message.channel.send('Загрузка...').then(msg => {
             request('https://nekos.life/api/v2/img/hug', function (error, response, body) {
                 try {
