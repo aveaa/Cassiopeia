@@ -42,6 +42,15 @@ if(message.content.startsWith(p + 'say')) {
     .setTimestamp();
     message.channel.send({embed});
 }
+if(message.content.startsWith(p + `info-bot`)) {
+    const embed = new Discord.RichEmbed()
+        .setTitle("**Информация о боте**")
+        .setColor("#000594")
+        .setDescription('Бот создан для сервера'+server_name+'\n У нас копирай для бота \n https://www.copyrighted.com/work/iZl7wRmIpqrD60a9 \n\n Если вы будите красть код без разришения,это будет статья Автороское Право \n Автор бота: <@406343162651738112> \n Другие авторы бота: <@361951318929309707> <@421030089732653057> \n Создатель'+server_name+': <@378915782270124033>')
+        .setFooter(server_name+"| ;info-bot") 
+        .setTimestamp();
+    message.channel.send({embed});
+}
 if (['ship'].includes(command)) {
     if (!args[0]) args[0] = message.guild.members.random();
     if (!args[1]) args[1] = message.author
@@ -285,6 +294,7 @@ if(['sms'].includes(command)) {
         });
     }
     if (message.content.startsWith(p + `gasm`)) {
+        if (!message.channel.nsfw) return message.channel.send("**Иди в nsfw!**");
         message.delete();
         message.channel.send('Загрузка...').then(msg => {
     request('https://nekos.life/api/v2/img/gasm', function (error, response, body) {
@@ -331,6 +341,7 @@ if(['sms'].includes(command)) {
         });
     }
     if (message.content.startsWith(p + `hentai`)) {
+        if (!message.channel.nsfw) return message.channel.send("**Иди в nsfw!**");
         message.delete();
         message.channel.send('Загрузка...').then(msg => {
     request('https://nekos.life/api/v2/img/hentai', function (error, response, body) {
@@ -857,15 +868,6 @@ if(message.content.startsWith(p + `help`)) {
         .setTimestamp();
     message.channel.send({embed});
 }});
-if(message.content.startsWith(p + `info-bot`)) {
-    const embed = new Discord.RichEmbed()
-        .setTitle("**Информация о боте**")
-        .setColor("#000594")
-        .setDescription('Бот создан для сервера'+server_name+'\n У нас копирай для бота \n https://www.copyrighted.com/work/iZl7wRmIpqrD60a9 \n\n Если вы будите красть код без разришения,это будет статья Автороское Право \n Автор бота: <@406343162651738112> \n Другие авторы бота: <@361951318929309707> <@421030089732653057> \n Создатель'+server_name+': <@378915782270124033>')
-        .setFooter(server_name+"| ;info-bot") 
-        .setTimestamp();
-    message.channel.send({embed});
-}
 //статус
     client.on('ready', () => {
         client.user.setPresence({ game: { name: `за MoonChat🌒 | ;help`, type: 3 } }).catch();
