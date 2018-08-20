@@ -728,6 +728,73 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `coffee`)) {
+    let user = message.author;
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://media1.tenor.com/images/41ca1498e20e7983bfb5be3a3c12d588/tenor.gif?itemid=10003402",//1
+"https://media1.tenor.com/images/878b7d53a6b04bf09a222e9175a06b72/tenor.gif?itemid=10003333",//2
+"https://i.pinimg.com/originals/90/0d/40/900d4092592c8c76514825702e0b1871.gif",//3
+"https://i.gifer.com/ITNl.gif",//4
+"https://media1.tenor.com/images/e38a9e8fe558bf48893f4c0069aa2b44/tenor.gif?itemid=5554691",//5
+"https://gifer.com/i/CIaV.gif",//6
+"http://37.media.tumblr.com/7b0291d11e0d7cd705d46a361606bd89/tumblr_n8vbqjY3sg1r11qslo2_500.gif",//7
+"https://media.giphy.com/media/SCCjSLGQKfu6I/giphy.gif",//8
+"https://gifer.com/i/DWbF.gif",//9
+"https://data.whicdn.com/images/219385340/original.gif",//10
+"https://i.pinimg.com/originals/b4/84/5c/b4845c9057251890188a121bdc9fa7f5.gif",//11
+"https://i.imgur.com/Vg8BJBb.gif",//12
+"https://rinscribble.files.wordpress.com/2016/09/tumblr_mlig9kpqkk1s55xs5o1_500.gif",//13
+"https://cdn157.picsart.com/219546902011202.gif?r1024x1024",//14
+"https://gifer.com/i/w3f.gif",//15
+"https://data.whicdn.com/images/298743211/original.gif",//16
+"https://media.giphy.com/media/OGzFu4KQuZ2/giphy.gif"//17
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **Выпил кофе**`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;coffee")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("☕")
+      }).catch(function() {});
+});
+}
+if (message.content.startsWith(p + `flower`)) {
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://gifer.com/i/ODsd.gif",//1
+"https://vignette.wikia.nocookie.net/disney/images/d/d6/Tumblr_na3a2pu2N81ssaw6co2_500.gif/revision/latest?cb=20150214072201",//2
+"https://data.whicdn.com/images/287290280/original.gif",//3
+"https://gifer.com/i/3aXw.gif",//4
+"https://i.pinimg.com/originals/fe/1b/3d/fe1b3d3f1859e3e114a523f022181947.gif",//5
+"http://gifimage.net/wp-content/uploads/2017/09/anime-flower-gif-10.gif",//6
+"http://www.animatedimages.org/data/media/50/animated-flower-image-0064.gif",//7
+"https://uploads.disquscdn.com/images/3cd22412e5ff620ffe1b97097ac40252bbe5944db339a9811d5fb7b4a1e2253f.gif",//8
+"https://cdn120.picsart.com/212974394002202.gif?r1024x1024",//9
+"https://thumbs.gfycat.com/CourageousDamagedEkaltadeta-max-1mb.gif",//10
+"https://i.pinimg.com/originals/d9/c0/84/d9c084bc7cbef715350da856531f0583.gif",//11
+"https://media1.tenor.com/images/aa1ffffcc9fbb3742b719f84f48dc618/tenor.gif?itemid=9490271",//12
+"https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/0/0e/Flower.gif/revision/latest?cb=20161228022902",//13
+"https://i.pinimg.com/originals/8e/9b/af/8e9bafb5a07a3d340c906c835d186e8c.gif",//14
+"http://blvcccvrd.com/images/spring-flower-cartoon-pictures-7.gif",//15
+"https://78.media.tumblr.com/71e352c8a081e7bb09041a12adda9cf6/tumblr_p7rti3n5Jt1wg7k9po1_500.gif",//16
+"http://s6.favim.com/orig/151201/anime-flowers-gif-girl-Favim.com-3684436.gif"//17
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **Подарил цветы** ${user1}`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;flower @user")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("💐")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
@@ -779,7 +846,7 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
-        .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n **;angry** - начать злится \n **;sleep** - уснуть \n **;smoke** - выкурить сигу \n **;dance** - танцевать \n **;suicide** - сделать суицид \n **;hi** - сказать всем привет \n **;sad** - уйти в печаль \n **;beer** - выпить пива \n **;bite [user]** - укусить кого-то \n **;lick [user]** - лизнуть кого-то \n **;cookie [user]** - дать печенье \n **;nom [user]** - дать поесть \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку')
+        .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n **;angry** - начать злится \n **;sleep** - уснуть \n **;smoke** - выкурить сигу \n **;dance** - танцевать \n **;suicide** - сделать суицид \n **;hi** - сказать всем привет \n **;sad** - уйти в печаль \n **;beer** - выпить пива \n **;cofee** - выпеть кофе \n **;bite [user]** - укусить кого-то \n **;lick [user]** - лизнуть кого-то \n **;cookie [user]** - дать печенье \n **;nom [user]** - дать поесть \n **;flower [user]** - дать цветы \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку \n **;sex [user]** - выебать кого-то')
         .setFooter(server_name+"| ;help") 
         .setTimestamp();
     message.channel.send({embed});
