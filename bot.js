@@ -685,7 +685,7 @@ if (message.content.startsWith(p + `beer`)) {
 "https://media1.tenor.com/images/4657ab00910adb50ff814f8a54f210dd/tenor.gif?itemid=5081999"//17
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Выпел пивасика**`)
+      .setDescription(`${user} **Выпил пивасика**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;beer")
