@@ -556,7 +556,7 @@ if (message.content.startsWith(p + `sad`)) {
 "https://i.pinimg.com/originals/19/42/07/194207dd9df329dcc66bf0bc07eefe8c.gif"
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Ушел в печаль**`)
+      .setDescription(`${user} **Ушел(ла) в печаль**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;sad")
