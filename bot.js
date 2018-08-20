@@ -489,7 +489,7 @@ if(['sms'].includes(command)) {
 			"https://media1.tenor.com/images/b3ee0c82bf87b4cfce2067ebfa658828/tenor.gif"
 		];
 		     let embed = new Discord.RichEmbed()
-                        .setDescription(`${message.author.username} начал танцевать.`)
+                        .setDescription(`${message.author.username} начал(а) танцевать.`)
                         .setImage(urls[Math.floor(Math.random() * urls.length)])
                         .setColor('RANDOM')
 			.setFooter(server_name+"| ;dance")
@@ -523,7 +523,7 @@ if(['sms'].includes(command)) {
 "https://itadakimasuanime.files.wordpress.com/2013/03/checkerboard-cookies-saint-seiya.jpg"
 ];
 let embed = new Discord.RichEmbed()
-.setDescription(`${user} **Дал печение** ${user1}`)
+.setDescription(`${user} **Дал(а) печение** ${user1}`)
 .setImage(urls[Math.floor(Math.random() * urls.length)])
 .setColor('RANDOM')
 .setFooter(server_name+"| ;cookie @user")
@@ -624,7 +624,7 @@ if (message.content.startsWith(p + `nom`)) {
 "https://media1.tenor.com/images/26beab5ca39fba753a2de57b1d74e519/tenor.gif?itemid=5215437"//17
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Дал поесть**${user1}`)
+      .setDescription(`${user} **Дал(а) поесть**${user1}`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;nom @user")
@@ -691,7 +691,7 @@ if (message.content.startsWith(p + `beer`)) {
 "https://media1.tenor.com/images/4657ab00910adb50ff814f8a54f210dd/tenor.gif?itemid=5081999"//17
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Выпил пивасика**`)
+      .setDescription(`${user} **Выпил(а) пивасика**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;beer")
@@ -751,7 +751,7 @@ if (message.content.startsWith(p + `coffee`)) {
 "https://media.giphy.com/media/OGzFu4KQuZ2/giphy.gif"//17
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Выпил кофе**`)
+      .setDescription(`${user} **Выпил(а) кофе**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;coffee")
@@ -785,7 +785,7 @@ if (message.content.startsWith(p + `flower`)) {
 "http://s6.favim.com/orig/151201/anime-flowers-gif-girl-Favim.com-3684436.gif"//17
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Подарил цветы** ${user1}`)
+      .setDescription(`${user} **Подарил(а) цветы** ${user1}`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;flower @user")
