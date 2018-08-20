@@ -1,3 +1,9 @@
+//
+//MoonCat © 218
+//
+//Cassiopeia © 2018
+//
+
 const Discord = require(`discord.js`);
 const request = require("request");
 const client = new Discord.Client();
