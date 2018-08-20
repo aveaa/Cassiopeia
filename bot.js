@@ -658,7 +658,7 @@ let embed = new Discord.RichEmbed()
 .setFooter(server_name+"| ;hi ")
 .setTimestamp();
   msg.edit({embed}).then(function(message) {
-          message.react("🍱")
+          message.react("👋")
       }).catch(function() {});
 });
 }
