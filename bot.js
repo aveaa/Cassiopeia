@@ -46,7 +46,7 @@ if(message.content.startsWith(p + `info-bot`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Информация о боте**")
         .setColor("#000594")
-        .setDescription('Бот создан для сервера **MoonChat**`🌒` \n Если вы не верите что этот бот создан для этого сервера, у нас еть копирайт на этого бота:  \n** https://www.copyrighted.com/work/iZl7wRmIpqrD60a9 ** \n\n Если вы будите красть код без разришения,это будет статья "Автороское Право" \n `Автор бота:` <@406343162651738112> \n `Другие авторы бота:` <@361951318929309707>,<@421030089732653057> \n Создатель **MoonChat**`🌒`: <@378915782270124033>')
+        .setDescription('Бот создан для сервера **MoonChat**`🌒` \n Если вы не верите что этот бот создан для этого сервера, у нас еть копирайт на этого бота:  \n** https://www.copyrighted.com/work/iZl7wRmIpqrD60a9 ** \n\n Если вы будите красть код без разришения,это будет статья "Автороское Право" \n\n `Автор бота:` <@406343162651738112> \n `Другие авторы бота:` <@361951318929309707>,<@421030089732653057> \n `Создатель` **MoonChat**`🌒`: <@378915782270124033>')
         .setFooter(server_name+"| ;info-bot") 
         .setTimestamp();
     message.channel.send({embed});
@@ -449,7 +449,9 @@ if(['sms'].includes(command)) {
 		     let embed = new Discord.RichEmbed()
                         .setDescription(`${user} **выкурил(а) сигарету.**`)
                         .setImage(urls[Math.floor(Math.random() * urls.length)])
-                        .setColor('RANDOM');
+                        .setColor('RANDOM')
+                        .setFooter(server_name+"| ;smoke")
+                        .setTimestamp();
                     msg.edit({embed}).then(function(message) {
                             message.react("🚬")
                         }).catch(function() {});
@@ -470,7 +472,7 @@ if(['sms'].includes(command)) {
                         }).catch(function() {});
         });
     }
-	if (message.content.startsWith(p + `suicide`)) {
+	if (message.content.startsWith(p + `rip`)) {
         let user = message.author;
 		message.channel.send('Загрузка...').then(msg => {
          const urls = ['https://lh3.googleusercontent.com/-buUYgrq_wKc/VRO0gc7EHqI/AAAAAAAAAG0/7Ntm-6fFkk4/w500-h288/naomi%2Bsuicide%2Bgif.gif', 'https://uploads.disquscdn.com/images/2dbbc921cb13de3198a3b6ae0099e725bfb0c80129d70bacf47819fb765deef1.gif', 'http://37.media.tumblr.com/tumblr_m7ram5jIAA1qzbqw1o1_250.gif', 'https://i.pinimg.com/originals/79/2f/37/792f37131d123c568e7114b7b829e572.gif', 'http://thisisinfamous.com/wp-content/uploads/2014/12/tumblr_ngjphxwU011t3zq0no1_400.gif', 'httpsimage.net/wp-content/uploads/2017/07/anime-suicide-gif-15.gif', 'https://data.whicdn.com/images/290510883/original.gif', 'https://media.giphy.com/media/WsWJZcJoxmLUk/giphy.gif', 'https://media1.tenor.com/images/a5db1c26b710b8b834d8265bf97a6c79/tenor.gif?itemid=5091706', 'http://38.media.tumblr.com/c75ba943c38bad612d9e722ee3142bb3/tumblr_n418yewq601tubxydo1_500.gif', 'http://66.media.tumblr.com/e2ab4fd11151e5e8acc627254bb7594d/tumblr_mo1ef0QwUS1s0pcfao1_500.gif', 'https://i.gifer.com/3ZvS.gif', 'http://gifimage.net/wp-content/uploads/2017/07/anime-suicide-gif-8.gif', 'https://i.pinimg.com/originals/a5/f1/96/a5f196464ed42f493b95a600099e83b9.gif', 'https://cdn60.picsart.com/182542841000202.gif?r1024x1024', 'https://zippy.gfycat.com/EquatorialGleefulArabianhorse.gif', 'http://data.whicdn.com/images/107593752/large.gif', 'https://i.gifer.com/Rk5D.gif', 'https://pa1.narvii.com/6535/3eb238ede3ccbc364d487c60f9d8b9c9fcb4f515_hq.gif', 'http://gifimage.net/wp-content/uploads/2017/07/anime-suicide-gif-2.gif'];
@@ -478,11 +480,13 @@ if(['sms'].includes(command)) {
                         .setDescription(`${user} **совершил(а) суицид..**`)
                         .setImage(urls[Math.floor(Math.random() * urls.length)])
                         .setColor('RANDOM')
-		    .setFooter(server_name+"| ;suicide")
-		     .setTimestamp();
-                    msg.edit({embed});
-        });
-	}
+		                .setFooter(server_name+"| ;rip")
+		                .setTimestamp();
+                        msg.edit({embed}).then(function(message) {
+                            message.react("☠")
+                        }).catch(function() {});
+                  });
+                  }
 	if (message.content.startsWith(p + `dance`)) {
         let user = message.author;
 				      message.channel.send('Загрузка...').then(msg => {
@@ -863,7 +867,7 @@ if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Все команды бота:**")
         .setColor("#000594")
-        .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n **;angry** - начать злится \n **;sleep** - уснуть \n **;smoke** - выкурить сигу \n **;dance** - танцевать \n **;suicide** - сделать суицид \n **;hi** - сказать всем привет \n **;sad** - уйти в печаль \n **;beer** - выпить пива \n **;coffee** - выпить кофе \n **;bite [user]** - укусить кого-то \n **;lick [user]** - лизнуть кого-то \n **;cookie [user]** - дать печенье \n **;nom [user]** - дать поесть \n **;slap [user]** - ударить кого-то \n **;flower [user]** - дать цветы \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку \n **;sex [user]** - выебать кого-то')
+        .setDescription('\n\n **__Основные__** \n\n **;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n **;info-bot** - узнать информацию о боте \n\n **__Развлекательные__** \n\n **;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n\n **__Реакции__** \n\n **;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n **;angry** - начать злится \n **;sleep** - уснуть \n **;smoke** - выкурить сигу \n **;dance** - танцевать \n **;rip** - сделать суицид \n **;hi** - сказать всем привет \n **;sad** - уйти в печаль \n **;beer** - выпить пива \n **;coffee** - выпить кофе \n **;bite [user]** - укусить кого-то \n **;lick [user]** - лизнуть кого-то \n **;cookie [user]** - дать печенье \n **;nom [user]** - дать поесть \n **;slap [user]** - ударить кого-то \n **;flower [user]** - дать цветы \n\n **__NSFW__** \n\n **;gasm** - отправить картинку оргазма \n **;hentai** - показать хентай фотку \n **;sex [user]** - выебать кого-то')
         .setFooter(server_name+"| ;help") 
         .setTimestamp();
     message.channel.send({embed});
