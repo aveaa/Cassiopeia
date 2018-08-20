@@ -8,6 +8,7 @@ const Discord = require(`discord.js`);
 const request = require("request");
 const client = new Discord.Client();
 let p = ";"
+let admp = "@"
 //ID ролей
 let Oxpana = '477045054045814793';
 let Kosmo = '477045398263955456';
@@ -115,7 +116,7 @@ if(['sms'].includes(command)) {
         })
         message.delete().catch(O_o=>{});
     }
-	if (message.content.startsWith(p + `eval`) && message.author.id === "406343162651738112" || message.author.id === "361951318929309707") {
+	if (message.content.startsWith(admp + `eval`) && message.author.id === "406343162651738112" || message.author.id === "361951318929309707") {
 		const code = message.content.split(" ").slice(1).join(" ");
         try {
          let evaled = eval(code);
