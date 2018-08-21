@@ -188,6 +188,23 @@ if(['sms'].includes(command)) {
         })
         message.delete().catch(O_o=>{});
     }
+	if(['ver2'].includes(command)) {
+	let msg = await message.channel.send("укажите кому отослать сообщение");
+		const coll = msg.createMessageCollector((message, user) => user.id === message.author.id);
+		coll.on('collect', async(messa) => {
+			if (message.content) {
+				let user = messa.mentions.users.firts();
+				let m = message.channel.send("Пользователь указан, напишите сообщение")
+				const coll = m.createMessageCollector((message, user) => user.id === message.author.id);
+		coll.on('collect', async(messag) => {
+			if (messag.content) {
+				message.channel.send("Отправлено!")
+				user.send('**Вам пришло смс от** '+message.author.username + '. \n**Он сказал(а):** '+ messa.content)
+			}
+		})
+			}
+		})
+	}
 	if (message.content.startsWith(admp + `eval`) && (message.author.id === "406343162651738112" || message.author.id === "361951318929309707")) {
 		const code = message.content.split(" ").slice(1).join(" ");
         try {
