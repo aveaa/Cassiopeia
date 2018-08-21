@@ -107,11 +107,11 @@ if (['rsp'].includes(command)) {
                 if (userChoice === computerChoice) {
                     return "**Ничья!**😀";
                 }
-                else if(userChoice === "камень") {
-                    if(computerChoice === "ножницы") {
+                else if(userChoice === "⚪ камень") {
+                    if(computerChoice === "✂ ножницы") {
                         return "**Ты выиграл(а)!**";
                     }
-                    else if (computerChoice === "бумагу") {
+                    else if (computerChoice === "📄 бумагу") {
                         return "**Ты проиграл(а).**";
                     }
                 }
@@ -137,7 +137,7 @@ if (['rsp'].includes(command)) {
                 message.channel.send(message.author + ", " + rspCW(userChoice, computerChoice))
             }
             else {
-            message.channel.send('Я выбрала ' + computerChoice + '. ' + message.author + ", " + rspCW(userChoice, computerChoice) + ' Ты выбрал\(а\)* ' + userChoice + ' Я выбрала ' + computerChoice);
+            message.channel.send('**Я выбрала** ' + computerChoice + '. ' + message.author + ", " + rspCW(userChoice, computerChoice) + ' **Ты выбрал\(а\)** ' + userChoice + ' **Я выбрала** ' + computerChoice);
          }
         };
 if (['8ball'].includes(command)) {
