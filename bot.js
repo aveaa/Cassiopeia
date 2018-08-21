@@ -80,7 +80,7 @@ if (['ship'].includes(command)) {
 if (['rsp'].includes(command)) {        
     let userChoice;
             if (!args[0]) {
-                message.channel.send(message.author + ', Ошибка. Причина: **Вы забыли указать что вы выбираете, камень, ножницы или бумагу**');
+                message.channel.send(message.author + ', ⛔ Ошибка. Причина: **Вы забыли указать что вы выбираете, камень, ножницы или бумагу**');
                 return;
             }
             else if (['камень', 'rock', 'r', 'к'].includes(args[0].toLowerCase())) {
@@ -105,21 +105,21 @@ if (['rsp'].includes(command)) {
             function rspCW(userChoice, computerChoice) {
                 let award = randomInteger(1, 3);
                 if (userChoice === computerChoice) {
-                    return "**ничья!**😀";
+                    return "**Ничья!**😀";
                 }
                 else if(userChoice === "камень") {
                     if(computerChoice === "ножницы") {
-                        return "**ты выиграл(а)!**";
+                        return "**Ты выиграл(а)!**";
                     }
                     else if (computerChoice === "бумагу") {
-                        return "**ты проиграл(а).**";
+                        return "**Ты проиграл(а).**";
                     }
                 }
                 else if(userChoice === "бумагу") {
                     if(computerChoice === "камень") {
-                        return "**ты выиграл(а)!**";
+                        return "**Ты выиграл(а)!**";
                     } else if (computerChoice === "ножницы") {
-                        return "**ты проиграл(а).**";
+                        return "**Ты проиграл(а).**";
                     }
                 }
                 else if(userChoice === "ножницы") {
@@ -130,14 +130,14 @@ if (['rsp'].includes(command)) {
                     }
                 }
                 else if (userChoice === 'Incorrect') {
-                    return "**ты не выбрал ни камень, ни ножницы, ни бумагу**";
+                    return "**Ты не выбрал ни камень, ни ножницы, ни бумагу**";
                 }
             }
             if (userChoice === 'Incorrect') {
                 message.channel.send(message.author + ", " + rspCW(userChoice, computerChoice))
             }
             else {
-            message.channel.send('**Я выбрала** ' + computerChoice + '**.** ' + message.author + "**,** " + rspCW(userChoice, computerChoice) + ' Ты выбрал\(а\)* ' + userChoice + ' **Я выбрала** ' + computerChoice);
+            message.channel.send('Я выбрала ' + computerChoice + '. ' + message.author + ", " + rspCW(userChoice, computerChoice) + ' Ты выбрал\(а\)* ' + userChoice + ' Я выбрала ' + computerChoice);
          }
         };
 if (['8ball'].includes(command)) {
