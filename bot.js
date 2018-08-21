@@ -107,12 +107,12 @@ if (['rsp'].includes(command)) {
                 if (userChoice === computerChoice) {
                     return "**Ничья!**😀";
                 }
-                else if(userChoice === "⚪ камень") {
-                    if(computerChoice === "✂ ножницы") {
-                        return "**Ты выиграл(а)!**";
+                else if(userChoice === "камень") {
+                    if(computerChoice === "ножницы") {
+                        return "**Ты выиграл(а)!** 😢";
                     }
-                    else if (computerChoice === "📄 бумагу") {
-                        return "**Ты проиграл(а).**";
+                    else if (computerChoice === "бумагу") {
+                        return "**Ты проиграл(а).** 😎";
                     }
                 }
                 else if(userChoice === "бумагу") {
