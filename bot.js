@@ -70,13 +70,76 @@ if (['ship'].includes(command)) {
     if (percents <= 9) {loveText = 'Хуже некуда :poop:'; shkala = '□□□□□□□□□□';}
     if (percents >= 100) {loveText = 'ИДЕАЛЬНО!!! :heart_exclamation:'; shkala = '■■■■■■■■■■'; percents = 100;}
     const embed = new Discord.RichEmbed()
-        .setTitle(":heart: МАТЧМЕЙКИНГ :heart:")
+        .setTitle("МАТЧМЕЙКИНГ")
         .setColor("#000594")
         .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
         .setFooter(server_name+"| ;ship")
         .setTimestamp();
     message.channel.send({embed});
 }
+if (['rsp'].includes(command)) {        
+    let userChoice;
+            if (!args[0]) {
+                message.channel.send(message.author + ', Ошибка. Причина: **Вы забыли указать что вы выбираете, камень, ножницы или бумагу**');
+                return;
+            }
+            else if (['камень', 'rock', 'r', 'к'].includes(args[0].toLowerCase())) {
+                userChoice = 'камень';
+            }
+            else if (['бумагу', 'бумага', 'paper', 'p', 'б'].includes(args[0].toLowerCase())) {
+                userChoice = 'бумагу';
+            }
+            else if (['scissors', 'ножницы', 's', 'н'].includes(args[0].toLowerCase())) {
+                userChoice = 'ножницы';
+            } else {
+                userChoice = 'Incorrect';
+            }
+            let computerChoice = Math.random();
+            if (computerChoice < 0.34) {
+                computerChoice = "камень";
+            } else if(computerChoice <= 0.67) {
+                computerChoice = "бумагу";
+            } else {
+                computerChoice = "ножницы";
+            }
+            function rspCW(userChoice, computerChoice) {
+                let award = randomInteger(1, 3);
+                if (userChoice === computerChoice) {
+                    return "**ничья!**😀";
+                }
+                else if(userChoice === "камень") {
+                    if(computerChoice === "ножницы") {
+                        return "**ты выиграл(а)!**";
+                    }
+                    else if (computerChoice === "бумагу") {
+                        return "**ты проиграл(а).**";
+                    }
+                }
+                else if(userChoice === "бумагу") {
+                    if(computerChoice === "камень") {
+                        return "**ты выиграл(а)!**";
+                    } else if (computerChoice === "ножницы") {
+                        return "**ты проиграл(а).**";
+                    }
+                }
+                else if(userChoice === "ножницы") {
+                    if(computerChoice === "бумагу") {
+                        return "**ты выиграл(а)!**";
+                    } else if (computerChoice === "камень") {
+                        return "**ты проиграл(а).**";
+                    }
+                }
+                else if (userChoice === 'Incorrect') {
+                    return "**ты не выбрал ни камень, ни ножницы, ни бумагу**";
+                }
+            }
+            if (userChoice === 'Incorrect') {
+                message.channel.send(message.author + ", " + rspCW(userChoice, computerChoice))
+            }
+            else {
+            message.channel.send('**Я выбрала** ' + computerChoice + '**.** ' + message.author + "**,** " + rspCW(userChoice, computerChoice) + ' Ты выбрал\(а\)* ' + userChoice + ' **Я выбрала** ' + computerChoice);
+         }
+        };
 if (['8ball'].includes(command)) {
     let numOfAnswer = randomInteger(1, 11);
     if (!args[0]) {
