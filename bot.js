@@ -117,16 +117,16 @@ if (['rsp'].includes(command)) {
                 }
                 else if(userChoice === "бумагу") {
                     if(computerChoice === "камень") {
-                        return "**Ты выиграл(а)!**";
+                        return "**Ты выиграл(а)!** 😢";
                     } else if (computerChoice === "ножницы") {
-                        return "**Ты проиграл(а).**";
+                        return "**Ты проиграл(а).** 😎";
                     }
                 }
                 else if(userChoice === "ножницы") {
                     if(computerChoice === "бумагу") {
-                        return "**ты выиграл(а)!**";
+                        return "**ты выиграл(а)!** 😢";
                     } else if (computerChoice === "камень") {
-                        return "**ты проиграл(а).**";
+                        return "**ты проиграл(а).** 😎";
                     }
                 }
                 else if (userChoice === 'Incorrect') {
