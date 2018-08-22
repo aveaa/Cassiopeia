@@ -15,6 +15,7 @@ let Kosmo = '477045398263955456';
 let Smotri = '477045398263955456';
 let Chmute = '477065648544153600';
 let VoiceMute = '477065632546816000';
+let target = message.guild.members(message.mentions.user.first() || message.guild.members.get(args[0]));
 const server_name = 'MoonChat🌒 '
 //Функции
 function randomInteger(min, max) {
