@@ -934,5 +934,5 @@ if(message.content.startsWith(p + `help`)) {
 }});
 //статус
     client.on('ready', () => {
-        client.user.setPresence({ game: { name: `Смотрит на звезды | ;help`, type: 3 } }).catch();
+        client.user.setPresence({ game: { name: `на звезды | ;help`, type: 3 } }).catch();
     });
