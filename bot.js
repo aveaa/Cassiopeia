@@ -225,7 +225,7 @@ if(['sms'].includes(command)) {
                 try {
                     let arr = JSON.parse(body);
                     let embed = new Discord.RichEmbed()
-                        .setDescription(`${user} **обнял(а)** ${user1}`)
+                        .setDescription(target.user.displayAvatarURL+` ${user} **обнял(а)** ${user1}`)
                         .setImage(arr['url'])
                         .setColor('RANDOM')
                        .setFooter(server_name+"| ;hug @User") 
