@@ -1,5 +1,5 @@
 //
-//MoonCat © 218
+//MoonCat © 2018 //218 блять, насмешил
 //
 //Cassiopeia © 2018
 //
@@ -188,6 +188,7 @@ if(['sms'].includes(command)) {
         })
         message.delete().catch(O_o=>{});
     }
+
 	if (message.content.startsWith(admp + `eval`) && (message.author.id === "406343162651738112" || message.author.id === "361951318929309707")) {
 		const code = message.content.split(" ").slice(1).join(" ");
         try {
