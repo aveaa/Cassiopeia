@@ -30,6 +30,30 @@ function setBigTimeout(func, timeout) {
 //тут токен(секретный,Тссссссс.....)
 client.login(process.env.BOT_TOKEN);
 //команды
+client.on('memberGuildAdd', member => {
+	if(member.guild.id !='472966874133692426') return;
+	const channel = client.channels.get('472968393708929024');
+	channel.send({embed: new Discord.RichEmbed()
+		      .setTitle(`Добро пожаловать на ${member.guild.name}`)
+		      .setDescription(`**Приветствуем тебя ${member} на нашем космическом сервере \nТут ты найдешь разные конкурсы, добрую администрацию, много разных каналов, нашу собственную валюту и многое другое**`)
+		      .addField("Важные каналы:", "<#474204112758636544>  - **__канал с информацией сервера__** \n<#472968097456717824> - **__канал со всеми новостями сервера__** \n<#472968193061814282> - **__канал с конкурсами сервера__**")
+		      .setImage(member.guild.iconURL)
+		      .setThumbnail(member.user.avatarURL)
+		      .setFooter(member.user.avatarURL, member.user.tag)
+		      .setColor("RANDOM")
+		     })
+});
+client.on('memberGuildRemove', member => {
+	if(member.guild.id !='472966874133692426') return;
+	const channel = client.channels.get('472968393708929024');
+	channel.send({embed: new Discord.RichEmbed()
+		      .setTitle(`Прощай ${member.user.tag}`)
+		      .setDescription(`${member.user.username} решил покинуть нас, видимо космос ему не по зубам! :wave:`)
+		      .setColor("RANDOM")
+		      .setThumbnail(member.user.avatarURL)
+		      .setFooter(member.user.avatarURL, member.user.tag)
+		     })
+});
 client.on('message', message => {
     const args = message.content.slice(p.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
