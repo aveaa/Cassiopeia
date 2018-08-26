@@ -7,7 +7,7 @@
 const Discord = require(`discord.js`);
 const request = require("request");
 const client = new Discord.Client();
-let id = '483248667977973760';
+let id = '476978677872328705';
 client.on('voiceStateUpdate', (old_, new_) => {
 if (old_.voiceChannelID) new_.removeRole(id).catch()
 if (new_.voiceChannelID) new_.addRole(id).catch()
