@@ -905,6 +905,74 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+/*
+if (message.content.startsWith(p + `название команды`)) {
+    let user = message.author;
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`Титл`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;команда")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("эмоджи")
+      }).catch(function() {});
+});
+}
+*/
+if (message.content.startsWith(p + `tea`)) {
+    let user = message.author;
+    message.channel.send('Загрузка...').then(msg => {
+        const urls = [
+"https://gifer.com/i/DWbF.gif",
+"https://i.pinimg.com/originals/40/5e/f2/405ef2ad9f258c156f451b89f6bbe882.gif",
+"https://media1.tenor.com/images/da0801a732b0340d8e723cbaeb7a4190/tenor.gif?itemid=10219968",
+"https://cdn52.picsart.com/171700590000201.gif?r1024x1024",
+"http://i.imgur.com/IS0nkrw.gif",
+"http://data.whicdn.com/images/15175757/large.gif",
+"http://joor.me/uploads/block/2017-01-13/b2/48/OCAG2akdl0mWI-55H24x5gQWjYieFqxi.gif",
+"https://i.pinimg.com/originals/48/8b/4b/488b4bb42b11b7847c4d753ca0ace6ef.gif",
+"https://vignette.wikia.nocookie.net/caravaneer2/images/7/73/Yuno_Cute.gif/revision/latest?cb=20170417235325",
+"https://media.giphy.com/media/sdX9dcy0EcZyM/source.gif",
+"https://78.media.tumblr.com/36f70582cb88d7f7fdc092574eabb76c/tumblr_oju3esp58b1uc9x1zo1_500.gif",
+"https://media.giphy.com/media/x44paVW9zFZKw/giphy.gif",
+"https://media.tenor.com/images/f1d92c2e1731253deb643de2a8d5b883/tenor.gif",
+"https://i.pinimg.com/originals/e6/ed/e7/e6ede70528b7730aa39c6b0121f91bf2.gif",
+"https://data.whicdn.com/images/240039491/original.gif",
+"https://i.pinimg.com/originals/e0/00/10/e000104460fcf7f1e68666857efe6b78.gif",
+"https://i.pinimg.com/originals/d5/ab/db/d5abdbeebd8f38054b775baf54023097.gif"
+];
+let embed = new Discord.RichEmbed()
+      .setDescription(`${user} **выпил чая**`)
+      .setImage(urls[Math.floor(Math.random() * urls.length)])
+      .setColor('RANDOM')
+.setFooter(server_name+"| ;tea")
+.setTimestamp();
+  msg.edit({embed}).then(function(message) {
+          message.react("☕")
+      }).catch(function() {});
+});
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
