@@ -957,7 +957,6 @@ let embed = new Discord.RichEmbed()
 });
 }
 if (message.content.startsWith(p + `neko`)) {
-    message.delete();
     message.channel.send('Загрузка...').then(msg => {
         request('https://nekos.life/api/v2/img/neko', function (error, response, body) {
             try {
