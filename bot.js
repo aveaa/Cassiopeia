@@ -730,6 +730,10 @@ if (message.content.startsWith(p + `hi`)) {
     message.delete();
     let user = message.author;
     let user1 = message.mentions.users.first();
+    if (!user1 || user1.id === user.id) {
+        user = bot.client.user;
+        user1 = message.author;
+    }
 const urls = [
     "https://orig00.deviantart.net/8d1d/f/2010/319/4/b/hi_____animated_by_0febris0-d2wu3lv.gif",//1
 "https://steamusercontent-a.akamaihd.net/ugc/1617175662597177927/732757601CDBF2E52C41EF3349035A337BB119D7/",//2
