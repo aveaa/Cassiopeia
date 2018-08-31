@@ -515,7 +515,6 @@ if(['sms'].includes(command)) {
     }
 	if (message.content.startsWith(p + `smoke`)) {
         let user = message.author;
-
 				      message.channel.send('Загрузка...').then(msg => {
 		     const urls = ['https://thumbs.gfycat.com/SphericalDependentHalibut-small.gif', 'https://78.media.tumblr.com/7746fca41c6782df47d7cd6925adba6f/tumblr_orcpabAWTV1sqhf08o1_500.gif', 'http://animeonline.su/uploads/posts/2015-06/1435137244_end.gif', 'https://media.giphy.com/media/hnRXZQiHWTtTO/giphy.gif', 'https://media.giphy.com/media/1k6S4iyfFyTRK/giphy.gif' ,'https://i.pinimg.com/originals/10/4b/9e/104b9ea0f2dea93d9374b092b82e1256.gif', 'https://s3-eu-west-1.amazonaws.com/files.surfory.com/uploads/2015/2/14/54dd05a41f395d0b468b465a/54df5bf31f395daa438b4c8e.gif', 'http://s8.favim.com/orig/150926/anime-guy-black-and-white-gif-smoking-Favim.com-3361618.gif', 'http://img0.safereactor.cc/pics/post/anime-gif-Anime-Subete-ga-F-ni-Naru-The-Perfect-Insider-2638766.gif', 'http://s017.radikal.ru/i424/1111/2b/ecae2f095abb.gif', 'https://78.media.tumblr.com/5bec6027d1c27194e6d3d5863c739d5f/tumblr_ozmfkvy8Pc1urnatuo1_500.gif', 'https://78.media.tumblr.com/6ac2528e3cde0894adb41fbc4e56def0/tumblr_owayv78WNu1vbfbhho1_500.gif'];
 		     let embed = new Discord.RichEmbed()
@@ -730,9 +729,9 @@ let embed = new Discord.RichEmbed()
 if (message.content.startsWith(p + `hi`)) {
     let user = message.author;
     let user1 = message.mentions.users.first();
-    message.channel.send('Загрузка...').then(msg => {
-        const urls = [
-"https://orig00.deviantart.net/8d1d/f/2010/319/4/b/hi_____animated_by_0febris0-d2wu3lv.gif",//1
+    message.delete();
+const urls = [
+    "https://orig00.deviantart.net/8d1d/f/2010/319/4/b/hi_____animated_by_0febris0-d2wu3lv.gif",//1
 "https://steamusercontent-a.akamaihd.net/ugc/1617175662597177927/732757601CDBF2E52C41EF3349035A337BB119D7/",//2
 "https://image.noelshack.com/fichiers/2018/17/3/1524685070-df0a9rx.gif",//3
 "https://thumbs.gfycat.com/HatefulBlindFunnelweaverspider-size_restricted.gif",//4
@@ -750,16 +749,27 @@ if (message.content.startsWith(p + `hi`)) {
 "https://thumbs.gfycat.com/HauntingNeighboringBarracuda-max-1mb.gif",//16
 "http://pa1.narvii.com/5935/a557baffc06658c5b3c2932eb0bc496cb112d04c_00.gif"//17
 ];
-let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **Приветствует всех!**`)
-      .setImage(urls[Math.floor(Math.random() * urls.length)])
-      .setColor('RANDOM')
-.setFooter(server_name+"| ;hi ")
-.setTimestamp();
-  msg.edit({embed}).then(function(message) {
-          message.react("👋")
-      }).catch(function() {});
-});
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    const selfbite = new Discord.RichEmbed()
+                    .setDescription(`${user} **сказал(а) привет** ${user1}`)
+                    .setImage((urls[Math.floor(Math.random() * urls.length)]))
+                    .setColor('RANDOM')
+                    .setFooter(server_name+" | ;hi @User") 
+                    .setTimestamp(); 
+    if (!user1 || user1.id === user.id) return message.channel.send(selfbite).then(function(message) {
+                        message.react("😱")
+                    }).catch(function() {});
+                let embed = new Discord.RichEmbed()
+                    .setDescription(`${user} **сказал(а) все привет!**`)
+                    .setImage((urls[Math.floor(Math.random() * urls.length)]))
+                    .setColor('RANDOM')
+                    .setFooter(server_name+" | ;hi") 
+                    .setTimestamp(); 
+                    message.channel.send(embed
+                    ).then(function(message) {
+                        message.react("😱")
+                    }).catch(function() {});
 }
 if (message.content.startsWith(p + `beer`)) {
     let user = message.author;
