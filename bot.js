@@ -14,6 +14,7 @@ if (new_.voiceChannelID) new_.addRole(id).catch()
 });
 let p = ";"
 let admp = "@"
+let color = "#f677fd";
 //ID ролей
 let Oxpana = '477045054045814793';
 let Kosmo = '477045398263955456';
@@ -65,7 +66,7 @@ client.on('message', message => {
 if(message.content.startsWith(p + 'say')) {
     let say = message.content.slice((p + 'say').length);
     const embed = new Discord.RichEmbed()
-    .setColor("#000594")
+    .setColor(color)
     .setDescription(say)
     .setFooter(server_name+"| ;say [text]")
     .setTimestamp();
@@ -74,7 +75,7 @@ if(message.content.startsWith(p + 'say')) {
 if(message.content.startsWith(p + `info-bot`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("**Информация о боте**")
-        .setColor("#000594")
+        .setColor(color)
         .setDescription('Бот создан для сервера **MoonChat**`🌒` \n Если вы не верите что этот бот создан для этого сервера, у нас еть копирайт на этого бота:  \n** https://www.copyrighted.com/work/iZl7wRmIpqrD60a9 ** \n\n Если вы будите красть код без разришения,это будет статья "Автороское Право" \n\n `Автор бота:` <@406343162651738112> \n `Другие авторы бота:` <@361951318929309707>,<@421030089732653057> \n `Создатель` **MoonChat**`🌒`: <@378915782270124033> \n\n **Версия бота:** `0.3.5` **beta**')
         .setFooter(server_name+"| ;info-bot") 
         .setTimestamp();
@@ -100,7 +101,7 @@ if (['ship'].includes(command)) {
     if (percents >= 100) {loveText = 'ИДЕАЛЬНО!!! :heart_exclamation:'; shkala = '■■■■■■■■■■'; percents = 100;}
     const embed = new Discord.RichEmbed()
         .setTitle("МАТЧМЕЙКИНГ")
-        .setColor("#000594")
+        .setColor(color)
         .setDescription('▼***' + args[0] + '***\n▲***' + args[1] + '***\n\n:revolving_hearts:Любовь в проценатах: **' + percents + '%** `[' + shkala + ']`\n:revolving_hearts:' + '\n\nВердикт: **' + loveText + '**')
         .setFooter(server_name+"| ;ship")
         .setTimestamp();
@@ -172,7 +173,7 @@ if (['rsp'].includes(command)) {
 if (['8ball'].includes(command)) {
     let numOfAnswer = randomInteger(1, 11);
     if (!args[0]) {
-        message.reply('Ошибка. Причина: **Не указан аргумент**\n\nПравильное использование:\n=8ball `<вопрос>`'); 
+        message.reply('Ошибка. Причина: **Не указан аргумент**\n\nПравильное использование:\n;8ball `<вопрос>`'); 
         return;
     }
     if (numOfAnswer === 1) message.reply('Без сомннения!');
@@ -187,24 +188,6 @@ if (['8ball'].includes(command)) {
     else if (numOfAnswer === 10) message.reply('Cомневаюсь');
     else message.reply('Спроси позднее, я не знаю');
 }
-/*
-client.on('voiceStateUpdate', (old_, new_) => {
-    let arr = {
-    "475282831220932623": "476978677872328705",
-    "475282664677703703": "476978677872328705",
-    "475283444260143115": "476978677872328705",
-    "475282937995198465": "476978677872328705",
-    "475283287368138772": "476978677872328705",
-    "475283005137747978": "476978677872328705",
-    "475283869143400458": "476978677872328705"
-    }
-    if (old_.voiceChannelID == new_.voiceChannelID) return;
-    if (old_.voiceChannelID && arr[old_.voiceChannelID]) new_.removeRole(arr[old_.voiceChannelID]).catch();
-    if (new_.voiceChannelID && arr[new_.voiceChannelID]) new_.addRole(arr[old_.voiceChannelID]).catch();
-    console.log(arr[old_.voiceChannelID]);
-    console.log(arr[new_.voiceChannelID]); 
-});
-*/
 if(['sms'].includes(command)) {
     let user = message.mentions.members.first(); 
         if (!user) {
@@ -994,7 +977,7 @@ let embed = new Discord.RichEmbed()
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
 		const embed = new Discord.RichEmbed()
-			.setColor(`#000594`)
+			.setColor(color)
 			.setDescription(say_poll_embed)
 			.setFooter(server_name)
 			.setTimestamp();	
@@ -1009,7 +992,7 @@ let embed = new Discord.RichEmbed()
         if (message.author.bot) return;
         if (message.content.startsWith(p + 'ping')) {
         const embed = new Discord.RichEmbed()
-    .setColor("#000594")
+    .setColor(color)
     .setDescription('\n **Pong!** `' + `${Date.now() - message.createdTimestamp}` + ' ms` \n')
     .setFooter(server_name+"| ;ping")
     .setTimestamp();  
@@ -1023,7 +1006,7 @@ client.on('message', message => {
 if(message.content.startsWith(p + `help`)) {
     const embed = new Discord.RichEmbed()
         .setTitle("Все команды бота:")
-        .setColor("#000594")
+        .setColor(color)
         .addField("🔨 Основные", "**;help** - помощь \n **;say** `сообщение` - сказать от имени бота \n **;ping** - показать ваш пинг \n **;info-bot** - узнать информацию о боте")
     .addField("🎃 Развлекательные", "**;sms [user]** `сообщение` - сказать что-то человеку в личные сообщения \n **;ship [user/текст] [user/текст]** - проверить любовь в процентах \n **;8ball** `сообщение` - ответить боту на ваш вопрос \n **;rsp Камень/Ножницы/Бумага** - сыграть в камень, ножницы, бумага с ботом")
     .addField("😀 Реакции", "**;hug [user]** - обнять кого-то \n **;pat [user]** - погладить кого-то \n **;kiss [user]** - поцеловать кого-то \n **;poke [user]** - тыкнуть в кого-то \n **;cuddle [user]** - прижатся к кому-то \n **;tickle [user]** - пощекотать кого-то \n **;angry** - начать злится \n **;sleep** - уснуть \n **;smoke** - выкурить сигу \n **;dance** - танцевать \n **;rip** - сделать суицид \n **;hi** - сказать всем привет \n **;sad** - уйти в печаль \n **;beer** - выпить пива \n **;coffee** - выпить кофе \n **;tea** - выпить чая \n **;bite [user]** - укусить кого-то \n **;lick [user]** - лизнуть кого-то \n **;cookie [user]** - дать печенье \n **;nom [user]** - дать поесть \n **;slap [user]** - ударить кого-то \n **;flower [user]** - дать цветы")
