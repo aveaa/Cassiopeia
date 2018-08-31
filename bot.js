@@ -965,7 +965,6 @@ if (message.content.startsWith(p + `neko`)) {
                     .setDescription(`Зивсу не говорите только`)
                     .setImage(arr['url'])
                     .setColor('RANDOM')
-                    .setTimestamp();
                     msg.edit({embed
                     }).then(function(message) {
                         message.react("🤰")
