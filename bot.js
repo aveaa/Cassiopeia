@@ -956,6 +956,33 @@ let embed = new Discord.RichEmbed()
       }).catch(function() {});
 });
 }
+if (message.content.startsWith(p + `neko`)) {
+    message.delete();
+    let user = message.author;
+    let user1 = message.mentions.users.first();
+    if (!user1 || user1.id === user.id) {
+        user = bot.client.user;
+        user1 = message.author;
+    }
+    message.channel.send('Загрузка...').then(msg => {
+        request('https://nekos.life/api/v2/img/neko', function (error, response, body) {
+            try {
+                let arr = JSON.parse(body);
+                let embed = new Discord.RichEmbed()
+                    .setDescription(`Зивсу не говорите только`)
+                    .setImage(arr['url'])
+                    .setColor('RANDOM')
+                    .setTimestamp();
+                    msg.edit({embed
+                    }).then(function(message) {
+                        message.react("🤰")
+                    }).catch(function() {});
+                    } catch (e) {
+                   console.log(e)
+             }
+        });
+    });
+}
 if (message.content.startsWith(p + `||test`)) {
     message.delete();
     let user = message.author;
