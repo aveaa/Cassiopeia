@@ -750,19 +750,19 @@ const urls = [
     let user = message.author;
     let user1 = message.mentions.users.first();
     const selfbite = new Discord.RichEmbed()
-                    .setDescription(message.author+`**сказал(а) привет**`+message.mentions.users.first())
+                    .setDescription(message.author+`**сказал(а) всем привет**`)
                     .setImage((urls[Math.floor(Math.random() * urls.length)]))
                     .setColor('RANDOM')
-                    .setFooter(server_name+" | ;hi @User") 
+                    .setFooter(server_name+" | ;hi") 
                     .setTimestamp(); 
     if (!user1 || user1.id === user.id) return message.channel.send(selfbite).then(function(message) {
                         message.react("👋")
                     }).catch(function() {});
                 let embed = new Discord.RichEmbed()
-                    .setDescription(message.author+`**сказал(а) всем привет!**`)
+                    .setDescription(message.author+`**сказал(а) привет!**`+message.mentions.users.first())
                     .setImage((urls[Math.floor(Math.random() * urls.length)]))
                     .setColor('RANDOM')
-                    .setFooter(server_name+" | ;hi") 
+                    .setFooter(server_name+" | ;hi @User") 
                     .setTimestamp(); 
                     message.channel.send(embed
                     ).then(function(message) {
