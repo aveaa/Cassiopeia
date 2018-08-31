@@ -727,9 +727,9 @@ let embed = new Discord.RichEmbed()
 });
 }
 if (message.content.startsWith(p + `hi`)) {
+    message.delete();
     let user = message.author;
     let user1 = message.mentions.users.first();
-    message.delete();
 const urls = [
     "https://orig00.deviantart.net/8d1d/f/2010/319/4/b/hi_____animated_by_0febris0-d2wu3lv.gif",//1
 "https://steamusercontent-a.akamaihd.net/ugc/1617175662597177927/732757601CDBF2E52C41EF3349035A337BB119D7/",//2
@@ -758,17 +758,17 @@ const urls = [
                     .setFooter(server_name+" | ;hi @User") 
                     .setTimestamp(); 
     if (!user1 || user1.id === user.id) return message.channel.send(selfbite).then(function(message) {
-                        message.react("😱")
+                        message.react("👋")
                     }).catch(function() {});
                 let embed = new Discord.RichEmbed()
-                    .setDescription(`${user} **сказал(а) все привет!**`)
+                    .setDescription(`${user} **сказал(а) всем привет!**`)
                     .setImage((urls[Math.floor(Math.random() * urls.length)]))
                     .setColor('RANDOM')
                     .setFooter(server_name+" | ;hi") 
                     .setTimestamp(); 
                     message.channel.send(embed
                     ).then(function(message) {
-                        message.react("😱")
+                        message.react("👋")
                     }).catch(function() {});
 }
 if (message.content.startsWith(p + `beer`)) {
