@@ -946,7 +946,7 @@ if (message.content.startsWith(p + `tea`)) {
 "https://i.pinimg.com/originals/d5/ab/db/d5abdbeebd8f38054b775baf54023097.gif"
 ];
 let embed = new Discord.RichEmbed()
-      .setDescription(`${user} **выпил чая**`)
+      .setDescription(`${user} **выпил(а) чая**`)
       .setImage(urls[Math.floor(Math.random() * urls.length)])
       .setColor('RANDOM')
 .setFooter(server_name+"| ;tea")
