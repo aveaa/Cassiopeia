@@ -13,7 +13,7 @@ if (old_.voiceChannelID) new_.removeRole(id).catch()
 if (new_.voiceChannelID) new_.addRole(id).catch()
 });
 let p = ";"
-let admp = "@"
+let admp = "@!"
 let color = "#f677fd";
 //ID ролей
 let Oxpana = '477045054045814793';
@@ -21,7 +21,7 @@ let Kosmo = '477045398263955456';
 let Smotri = '477045398263955456';
 let Chmute = '477065648544153600';
 let VoiceMute = '477065632546816000';
-const server_name = 'MoonChat 🌙 '
+const server_name = 'MoonChat 🌌 '
 //Функции
 function randomInteger(min, max) {
     max++
